@@ -69,7 +69,7 @@
       
       <div class="swiper-wrapper">
 
-         <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://unsplash.com/photos/lzh3hPtJz9c -->
+         <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://www.netscribes.com/technology-watch/ -->
             <div class="content">
                </div>
          </section>
