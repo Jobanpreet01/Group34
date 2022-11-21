@@ -89,6 +89,25 @@
 
 </div>
 
+
+<div class="main">
+
+   <form == "" class="form-container">
+
+       <label for="email">Email</label>
+       <input type="text" id="email" placeholder="Enter Email" class="box" name="email" required>
+
+       <label for="name">Name</label>
+       <input type="text" id="name" placeholder="Name" class="box" name="name" required>
+
+       <label for="query">Query</label>
+       <input type="text" id="query" placeholder="Query" class="box" name="query" required>
+
+       <button type="submit" onclick="myAlert()" class="btn">Send Message</button>
+   </form>
+</div>
+</section>
+
 <section class="footer">
 
    <div class="box-container">
