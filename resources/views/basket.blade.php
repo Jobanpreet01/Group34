@@ -55,7 +55,7 @@
 
 <section class="heading-link">
    <h3>Your Basket</h3>
-   <p> <a href="index.php">home</a> / basket </p> <!-- links the home heading on the contact me page back to the home page -->
+   <p> <a href="{{url('/')}}">home</a> / basket </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
 <section class="footer">
@@ -72,10 +72,10 @@
 
       <div class="box">
          <h3>quick links</h3>
-         <a href="{{url('/')}}">Home</a>
+      <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
-      <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      <a href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a href="{{url('/basket')}}" class = "link"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
 
    </div>
