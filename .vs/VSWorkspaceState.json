@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\public",
-    "\\public\\css",
-    "\\resources",
-    "\\resources\\views",
-    "\\resources\\views\\auth",
-    "\\resources\\views\\layouts",
-    "\\routes"
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Http\\Controllers\\Auth",
+    "\\app\\Http\\Middleware",
+    "\\app\\Models",
+    "\\database",
+    "\\database\\migrations",
+    "\\database\\seeders"
   ],
-  "SelectedNode": "\\resources\\views\\contact.blade.php",
+  "SelectedNode": "\\database\\seeders\\AdminSeeder.php",
   "PreviewInSolutionExplorer": false
 }
