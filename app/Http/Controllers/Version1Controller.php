@@ -22,5 +22,8 @@ class Version1Controller extends Controller
     return view('basket');
     }
 
+    public function checkout(){
+    return view('checkout');
+    }
     
 }
