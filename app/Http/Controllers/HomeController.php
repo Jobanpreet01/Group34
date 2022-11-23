@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class HomeController extends Controller
 {
@@ -33,6 +35,9 @@ class HomeController extends Controller
      */
     public function adminHome()
     {
-        return view('adminHome');
+        $store = User::all(); #store all data in $store
+    return view('adminHome', ['members' => $store]); #memebers is a key that can be used as a variables in html page using $members
     }
+
+    
 }

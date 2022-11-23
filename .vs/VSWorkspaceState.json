@@ -1,16 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app",
-    "\\app\\Http",
-    "\\app\\Http\\Controllers",
-    "\\app\\Http\\Controllers\\Auth",
-    "\\app\\Http\\Middleware",
-    "\\app\\Models",
-    "\\database",
-    "\\resources",
-    "\\resources\\views"
+    "\\app"
   ],
-  "SelectedNode": "\\resources\\views\\basket.blade.php",
+  "SelectedNode": "\\public",
   "PreviewInSolutionExplorer": false
 }
