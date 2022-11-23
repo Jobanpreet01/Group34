@@ -8,9 +8,9 @@
     "\\app\\Http\\Middleware",
     "\\app\\Models",
     "\\database",
-    "\\database\\migrations",
-    "\\database\\seeders"
+    "\\resources",
+    "\\routes"
   ],
-  "SelectedNode": "\\database\\seeders\\AdminSeeder.php",
+  "SelectedNode": "\\routes\\web.php",
   "PreviewInSolutionExplorer": false
 }

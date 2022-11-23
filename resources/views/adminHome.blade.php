@@ -78,7 +78,20 @@
 <!-- header section ends -->
 You are an Admin
 
-
+<table>
+<tr>
+<td>ID</td>
+<td>Name</td>
+<td>Email</td>
+</tr>
+@foreach($members as $user)
+<tr>
+<td>{{$user['id']}}</td>
+<td>{{$user['name']}}</td>
+<td>{{$user['email']}}</td>
+</tr>
+@endforeach
+</table>
 
 </body>
 </html>

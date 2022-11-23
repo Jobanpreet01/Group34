@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class Version1Controller extends Controller
 {
@@ -22,5 +23,6 @@ class Version1Controller extends Controller
     return view('basket');
     }
 
+    
     
 }
