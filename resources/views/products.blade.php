@@ -81,37 +81,22 @@
 <h1 class="heading">Our Products</h1>
 
 <div class="box-container"> <!-- creates the box for the image and text to be placed in -->
+ @foreach($storeData as $product)
+   <div class="product">
+      <img src="{{$product->Image}}" alt=""> <!--  -->
+      <h3>Title: {{$product->Title}}</h3>
+      <h3>Description: {{$product->Description}}</h3>
+      <h3>Quantity: {{$product->Quantity}}</h3>
+      <h3>£{{$product->Price}}</h3>
+      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
+   </div>
 
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "group34_database";
+   @endforeach
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT id, product_name, product_price,product_image FROM productdb";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo "Item: " . $row["product_name"]. " - Price: " . $row["product_price"]. " " . $row["product_image"]. "<br>", "<br>", "<br>";
-  }
-  
-} else {
-  echo "0 results";
-}
-
-mysqli_close($conn);
-?>
+</div>
 
 </section>
+
 
 <section class="footer">
 
