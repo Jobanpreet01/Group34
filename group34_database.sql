@@ -209,3 +209,19 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- Table for products--
+CREATE TABLE `group34_database`.`productdb` (`id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY , `product_name` VARCHAR(25) NOT NULL , `product_price` FLOAT NOT NULL , `product_image` VARCHAR(100) NOT NULL ) ENGINE = InnoDB;
+
+INSERT INTO `productdb` (`product_name`, `product_price`, `product_image`) VALUES ('Iphone 14', '1100', 'images/iphone.jpg'),
+('HP laptop', '800', 'images/hp.webp'),
+('PS5', '500', 'images/PS5.webp'),
+('Samsung TV', '1200', 'images/samsung.jpg'),
+('Acer Monitor', '250', 'images/acer.jpg'), ('Airpods Pro', '250', 'images/airpods.jfif'),
+('iPad Pro', '600', 'images/ipad.jfif'),
+('MacBook Pro', '1800', 'images/mac-book.jpg'),
+('Apple Watch Series 3', '350', 'images/apple-watch.jfif'),
+('Samsung Galaxy Z Flip 3', '900', 'images/samsung-flip.jpg'),
+('Xbox Series X', '400', 'images/x-box.jpg'),
+('Nintendo Switch', '200', 'images/nintendo-switch.jpg')
+

@@ -82,79 +82,34 @@
 
 <div class="box-container"> <!-- creates the box for the image and text to be placed in -->
 
-   <div class="product">
-      <img src="images/iphone.jpg" alt=""> <!--  -->
-      <h3>iPhone 14</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "group34_database";
 
-   <div class="product">
-      <img src="images/hp.webp" alt=""> <!--  -->
-      <h3>HP Laptop</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
-   <div class="product">
-      <img src="images/PS5.webp" alt=""> <!--  -->
-      <h3>PS5</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
+$sql = "SELECT id, product_name, product_price,product_image FROM productdb";
+$result = mysqli_query($conn, $sql);
 
-   <div class="product">
-      <img src="images/samsung.jpg" alt=""> <!--  -->
-      <h3>Samsung TV</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "Item: " . $row["product_name"]. " - Price: " . $row["product_price"]. " " . $row["product_image"]. "<br>", "<br>", "<br>";
+  }
+  
+} else {
+  echo "0 results";
+}
 
-   <div class="product">
-      <img src="images/acer.jpg" alt=""> <!--  -->
-      <h3>Acer Monitor</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/airpods.jfif" alt=""> <!--  -->
-      <h3>Airpods Pro</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/ipad.jfif" alt=""> <!--  -->
-      <h3>iPad Pro</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/mac-book.jpg" alt=""> <!--  -->
-      <h3>MacBook Pro</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/apple-watch.jfif" alt=""> <!--  -->
-      <h3>Apple Watch Series 3</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/samsung-flip.jpg" alt=""> <!--  -->
-      <h3>Samsung Galaxy Z Flip 3</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/x-box.jpg" alt=""> <!--  -->
-      <h3>Xbox Series X</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-   <div class="product">
-      <img src="images/nintendo-switch.jpg" alt=""> <!--  -->
-      <h3>Nintendo Switch</h3>
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
-   </div>
-
-</div>
+mysqli_close($conn);
+?>
 
 </section>
 
