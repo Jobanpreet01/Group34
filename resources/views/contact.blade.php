@@ -106,6 +106,25 @@
 
 </div>
 
+<div class="main">
+
+   <form == "" class="form-container">
+
+       <label for="email">Email</label>
+       <input type="text" id="email" placeholder="Enter Email" class="box" name="email" required>
+
+       <label for="name">Name</label>
+       <input type="text" id="name" placeholder="Name" class="box" name="name" required>
+
+       <label for="query">Query</label>
+       <input type="text" id="query" placeholder="Query" class="box" name="query" required>
+
+       <button type="submit" onclick="myAlert()" class="btn">Send Message</button>
+       
+   </form>
+</div>
+</section>
+
 <section class="footer">
 
    <div class="box-container">
@@ -121,10 +140,10 @@
 
       <div class="box">
          <h3>quick links</h3>
-         <a href="index.php" class="link">Home</a> <!-- allows the user to navigate through the pages using the links in the footer -->
-         <a href="products.php" class="link">Products</a>
-         <a href="contact.php" class="link">Contact Us</a>
-         <a href="basket.php" class="link">Basket</a>
+         <a href="{{url('/')}}" class = "link">Home</a>
+      <a href="{{url('/products')}}" class="link">Products</a>
+      <a href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a href="{{url('/basket')}}" class = "link"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
 
    </div>
