@@ -76,8 +76,8 @@
 
 
 <!-- header section ends -->
-You are an Admin
 
+<h1>List of Users</h1>
 <table>
 <tr>
 <td>ID</td>
@@ -92,6 +92,31 @@ You are an Admin
 </tr>
 @endforeach
 </table>
+
+
+<h1>List of Products in stock</h1>
+<table>
+<tr>
+<td>ID</td>
+<td>Title</td>
+<td>Description</td>
+<td>Quantity</td>
+<td>Price</td>
+</tr>
+@foreach($products as $product)
+<tr>
+<td>{{$product['id']}}</td>
+<td>{{$product->Title}}</td>
+<td>{{$product->Description}}</td>
+<td>{{$product->Quantity}}</td>
+<td>£{{$product->Price}}</td>
+</tr>
+@endforeach
+</table>
+
+
+
+
 
 </body>
 </html>

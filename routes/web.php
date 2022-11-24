@@ -22,7 +22,6 @@ Route::get('/', function () {
 */
 
 Route::get('/', 'App\Http\Controllers\Version1Controller@home');
-Route::get('', 'App\Http\Controllers\Version1Controller@products');
 Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'])->name('productsPage');
 Route::get('/contact', 'App\Http\Controllers\Version1Controller@contact');
 Route::get('/basket', 'App\Http\Controllers\Version1Controller@basket');
