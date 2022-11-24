@@ -73,7 +73,7 @@
 
 <section class="heading-link">
    <h3>Products</h3>
-   <p> <a href="index.php">home</a> / products </p> <!-- links the home heading on the contact me page back to the home page -->
+   <p> <a href="{{url('/')}}">home</a> / products </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
       <section class="products">
