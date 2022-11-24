@@ -72,7 +72,7 @@
 
 <section class="heading-link">
    <h3>Your Basket</h3>
-   <p> <a href="index.php">home</a> / basket </p> <!-- links the home heading on the contact me page back to the home page -->
+   <p> <a href="{{url('/')}}">home</a> / basket </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
 <section class="footer">

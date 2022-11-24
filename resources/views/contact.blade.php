@@ -71,7 +71,7 @@
 
 <section class="heading-link">
    <h3>Contact Us</h3>
-   <p> <a href="index.php">home</a> / contact </p> <!-- links the home heading on the contact me page back to the home page -->
+   <p> <a href="{{url('/')}}">home</a> / contact </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
       <section class="contact-me">
