@@ -466,7 +466,66 @@ section {
   color: #777;
 }
 
+.contact-me .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
 
+.contact-me .main form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  border: 0.1rem solid #0eb582;
+  padding: 2rem;
+}
+
+.contact-me .main form label {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding-bottom: 1rem;
+}
+
+.contact-me .main form .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 0.1rem solid #0eb582;
+  font-size: 1.6rem;
+  margin: .7rem 0;
+}
+
+.contact-me .main form .box:focus {
+  background: #0eb582;
+  color: #fff;
+}
+
+.contact-me .main form .box:focus::-webkit-input-placeholder {
+  color: #eee;
+}
+
+.contact-me .main form .box:focus:-ms-input-placeholder {
+  color: #eee;
+}
+
+.contact-me .main form .box:focus::-ms-input-placeholder {
+  color: #eee;
+}
+
+.contact-me .main form .box:focus::placeholder {
+  color: #eee;
+}
+
+.contact-me .main form textarea {
+  height: 15rem;
+  resize: none;
+}
 
 
 .products .box-container {
