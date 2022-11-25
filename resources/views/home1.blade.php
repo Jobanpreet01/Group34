@@ -1,4 +1,5 @@
-	<!DOCTYPE html>
+<?php use Illuminate\Support\Facades\Auth; ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -45,9 +46,34 @@
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
       @endguest
 
-      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{url('/home')}}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+      
+      <?php if(auth()->user()->type ?? 1): ?>
+      <a id="navbarDropdown" class="nav-link dropdown-toggle" 
+        href= "{{url('/home')}}"
+    
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
          {{ @Auth::user()->name }}
       </a>
+      <?php endif; ?>
+      
+
+
+      
+      <?php if(auth()->user()->type ?? 0): ?>
+      <a id="navbarDropdown" class="nav-link dropdown-toggle" 
+        href= "{{url('/admin')}}"
+    
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+         Admin
+      </a>
+      <?php endif; ?>
+      
+      
+      
+      
+      
+
+       
       
                                 
 
@@ -70,13 +96,84 @@
       <div class="swiper-wrapper">
 
          <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://www.netscribes.com/technology-watch/ -->
-            <div class="content">
+         <div class="content">
+            <h3>Welcome Vitality Electronics</h3>
                </div>
          </section>
       </div>
       </div>
 
 </section>
+
+<section class="contact-me">
+
+<h1 class="heading"> Our Influence Worldwide </h1>
+
+<div class="submit">
+
+   <div class="icons">
+      <i class="fas fa-globe"></i>
+      <h3>Global Reach :</h3>
+      <p>We are currently located in 108 countries and this is still expanding with us located in Europe, Asia, North and South America.</p>
+   </div>
+
+   <div class="icons">
+      <i class="fas fa-dollar"></i>
+      <h3>Total Revenue :</h3>
+      <p>In 2021 we had our best sales yet with revenue at 300 million which was reflected in our global expansion and expansion of tech products being sold.</p>
+   </div>
+
+   <div class="icons">
+      <i class="fas fa-phone"></i>
+      <h3>Customer Service : </h3>
+      <p>At vitalityelectronics we provide the best customer care by replying to you within 24 hours of your query and we strive for this to provide the best possible customer experience.</p>
+   </div>
+
+   <div class="icons">
+      <i class="fas fa-truck"></i>
+      <h3>Delivery :</h3>
+      <p>We provide free delivery for orders over £50 and provide next day delivery.</p>
+   </div>
+
+</div>
+
+<section class="contact-me">
+
+<h1 class="heading"> What We Specialise In </h1>
+
+<div class="submit">
+
+   <div class="icons">
+      <i class="fas fa-phone"></i>
+      <h3>Phones</h3>
+   </div>
+
+   <div class="icons">
+      <i class="fas fa-laptop"></i>
+      <h3>Laptops</h3>
+      </div>
+
+   <div class="icons">
+      <i class="fas fa-tv"></i>
+      <h3>TVs</h3>
+      </div>
+
+   <div class="icons">
+      <i class="fas fa-gamepad"></i>
+      <h3>Consoles</h3>
+      </div>
+
+      <div class="icons">
+      <i class="fas fa-headphones"></i>
+      <h3>Headphones</h3>
+      </div>
+      
+      <div class="icons">
+      <i class="fas fa-print"></i>
+      <h3>Printers</h3>
+      </div>
+
+</div>
 
 <!-- home section ends -->
    
