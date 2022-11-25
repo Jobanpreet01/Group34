@@ -97,6 +97,7 @@
 
          <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://www.netscribes.com/technology-watch/ -->
             <div class="content">
+            <h3>Welcome To Vitality Electronics</h3>
                </div>
          </section>
       </div>
