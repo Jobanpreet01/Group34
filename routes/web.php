@@ -26,8 +26,13 @@ Route::get('/products', [App\Http\Controllers\ProductsController::class, 'index'
 Route::get('/contact', 'App\Http\Controllers\Version1Controller@contact');
 Route::get('/basket', 'App\Http\Controllers\Version1Controller@basket');
 Route::get('/checkout', 'App\Http\Controllers\Version1Controller@checkout');
+Route::post('update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
+Route::post('remove/{id}', [App\Http\Controllers\HomeController::class, 'remove']);
 
-Route::post('/basket/{id}', 'App\Http\Controllers\HomeController@basket');
+
+
+Route::post('/home/{id}', 'App\Http\Controllers\HomeController@basket');
+
 
 Auth::routes(); #take care of all the routes for authorization such as for the login and register pages.
 
@@ -35,6 +40,7 @@ Auth::routes(); #take care of all the routes for authorization such as for the l
 Route::middleware(['auth', 'userAccess:user'])->group(function () {
   
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
 });
   
 

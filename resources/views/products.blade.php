@@ -90,7 +90,7 @@
       <h3>£{{$product->Price}}</h3>
 
       <!-- get quantity from user with this form-->
-      <form action="{{url('basket',$product->id)}}" method="POST">
+      <form action="{{url('home',$product->id)}}" method="POST">
       @csrf
       <input type= "number" value= "1" min="1" class="form" name="quantity">
 
