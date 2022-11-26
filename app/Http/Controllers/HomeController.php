@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Products;
 use App\Models\basket;
+use App\Models\Orders;
 use Illuminate\Support\Facades\Auth;
 use DB;
 
@@ -135,5 +136,30 @@ class HomeController extends Controller
 
     }
 
+
+    public function addToOrders(Request $request, $id) #Request is needed everytime we get data from a form
+    {
+
+    if(Auth::id()){ #if user is loged in
+
     
+    $product=Products::find($id); #get the id from the input of the user for the add to basket button
+
+    $order = new Orders;
+
+    
+    $order->name=$request->name;
+    $order->save();
+    
+    return redirect('home');
+
+
+
+     #stay on same page
+    }
+    
+    
+
+    
+}
 }
