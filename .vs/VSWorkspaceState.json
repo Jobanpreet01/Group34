@@ -9,8 +9,9 @@
     "\\database\\migrations",
     "\\database\\seeders",
     "\\resources",
-    "\\resources\\views"
+    "\\resources\\views",
+    "\\routes"
   ],
-  "SelectedNode": "\\database\\seeders\\AdminSeeder.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\ProductsController.php",
   "PreviewInSolutionExplorer": false
 }
