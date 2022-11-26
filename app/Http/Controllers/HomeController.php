@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Products;
 use App\Models\basket;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 
 class HomeController extends Controller
@@ -28,8 +29,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+       $baskets = basket::where('user_id', Auth::id())->get();  #get basket items where field 'user-id' in basket table is == to Auth::id
+
+
+
+        return view('home', compact('baskets')); # return /home + stored data
+
+
+
+
     }
+
+
+   
 
     /**
      * Show the application dashboard.
@@ -59,6 +72,7 @@ class HomeController extends Controller
 
     $basket = new basket;
 
+    $basket->user_id=$user->id;
     $basket->name=$user->name;
     $basket->email=$user->email;
     $basket->product_name=$product->Title;
@@ -66,17 +80,54 @@ class HomeController extends Controller
     $basket->quantity=$request->quantity;
     $basket->save();
     
-    
+    return redirect('home');
 
 
 
-    return redirect()->back(); #stay on same page
+     #stay on same page
     }
 
     else
     {
     return redirect('login'); #else: go to login and log in first
     }
+
+    }
+
+
+    /**
+     Update quantity for user
+     */
+    
+    function update(Request $request, $id){
+    
+
+    DB::table('baskets')
+    ->where('id', $id)
+    ->update(array('quantity' => $request->quantity));
+    
+
+    return redirect('home');
+    
+
+    }
+
+
+
+    /**
+     remove product from basket
+     */
+
+    function remove(Request $request, $id){
+    
+
+    DB::table('baskets')
+    ->where('id', $id)
+    ->delete();
+    
+
+    return redirect('home');
+    
 
     }
 
