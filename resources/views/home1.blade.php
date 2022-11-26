@@ -95,7 +95,7 @@
       
       <div class="swiper-wrapper">
 
-         <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://www.netscribes.com/technology-watch/ -->
+         <section class="swiper-slide slide" style="background: url(images/Logo.png);" >
             <div class="content">
             <h3>Welcome To Vitality Electronics</h3>
                </div>
