@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('user_id')->nullable();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
+            $table->string('product_id')->nullable();
             $table->string('product_name')->nullable();
             $table->string('quantity')->nullable();
             $table->string('price')->nullable();
