@@ -76,34 +76,88 @@
 
 
 <!-- header section ends -->
-<style> h1{text-align: center;} h2{text-align: center;}</style>
-<h1>
-    <div style="border:solid;border-color:green;width:800px; margin:0 auto;">
-    <p>You are an Admin</p>
-</div></h1>
-<h2><div style="width:800px; margin:0 auto;"><table><tr>
-<th><div style="border:1.5px solid;border-color:black;width:90px; margin:0 auto;">
-ID&nbsp;&nbsp;&nbsp;&nbsp;
-</div></th>&nbsp;
-<th><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">
-Name&nbsp;&nbsp;&nbsp;&nbsp;
-</div></th>
-<th><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">
-Email&nbsp;&nbsp;&nbsp;&nbsp;
-</div></th>
-</tr></h2></div></div>
+
+<h1>List of Users</h1>
+<table>
+<tr>
+<td>ID</td>
+<td>Name</td>
+<td>Email</td>
+</tr>
 @foreach($members as $user)
 <tr>
-<td><div style="border:1.5px solid;border-color:black;width:90px; margin:0 auto;">{{$user['id']}}</div></td>
-<td><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">{{$user['name']}}</div></td>
-<td><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">{{$user['email']}}</div></td>
-</tr></div>
+<td>{{$user['id']}}</td>
+<td>{{$user['name']}}</td>
+<td>{{$user['email']}}</td>
+</tr>
 @endforeach
 </table>
 
+
+<h1>List of Products in stock</h1>
+<table>
+<tr>
+<td>ID</td>
+<td>Title</td>
+<td>Description</td>
+<td>Quantity</td>
+<td>Price</td>
+</tr>
+@foreach($products as $product)
+<tr>
+<td>{{$product['id']}}</td>
+<td>{{$product->Title}}</td>
+<td>{{$product->Description}}</td>
+<td>{{$product->Quantity}}</td>
+<td>£{{$product->Price}}</td>
+</tr>
+@endforeach
+</table>
+
+
+
+<h1>All orders from users</h1>
+<table>
+<tr>
+<td>Order ID</td>
+<td>User ID</td>
+<td>Product ID</td>
+<td>Product Name</td>
+<td>Quantity</td>
+<td>Price</td>
+<td>Placed On Date:</td>
+<td>Email Address</td>
+<td>Name For Delivery</td>
+<td>House Number</td>
+<td>Street Address</td>
+<td>Post Code</td>
+
+</tr>
+@foreach($orders as $order)
+<tr>
+<td>{{$order['id']}}</td>
+<td>{{$order['user_id']}}</td>
+<td>{{$order['product_id']}}</td>
+<td>{{$order['product_name']}}</td>
+<td>{{$order['quantity']}}</td>
+<td>{{$order['price']}}</td>
+<td>{{$order['created_at']}}</td>
+<td>{{$order['email']}}</td>
+<td>{{$order['name']}}</td>
+<td>{{$order['house_number']}}</td>
+<td>{{$order['street']}}</td>
+<td>{{$order['postcode']}}</td>
+
+</tr>
+@endforeach
+</table>
+
+
+
+
+
 </body>
 </html>
-
 
 
 
