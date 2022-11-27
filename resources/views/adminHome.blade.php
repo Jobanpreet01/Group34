@@ -77,19 +77,28 @@
 
 <!-- header section ends -->
 
-<h1>List of Users</h1>
-<table>
-<tr>
-<td>User ID</td>
-<td>Name</td>
-<td>Email</td>
-</tr>
+<style> h1{text-align: center;} h2{text-align: center;}</style>
+<h1>
+    <div style="border:solid;border-color:green;width:800px; margin:0 auto;">
+    <p>You are an Admin</p>
+</div></h1>
+<h2><div style="width:800px; margin:0 auto;"><table><tr>
+<th><div style="border:1.5px solid;border-color:black;width:90px; margin:0 auto;">
+ID&nbsp;&nbsp;&nbsp;&nbsp;
+</div></th>&nbsp;
+<th><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">
+Name&nbsp;&nbsp;&nbsp;&nbsp;
+</div></th>
+<th><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">
+Email&nbsp;&nbsp;&nbsp;&nbsp;
+</div></th>
+</tr></h2></div></div>
 @foreach($members as $user)
 <tr>
-<td>{{$user['id']}}</td>
-<td>{{$user['name']}}</td>
-<td>{{$user['email']}}</td>
-</tr>
+<td><div style="border:1.5px solid;border-color:black;width:90px; margin:0 auto;">{{$user['id']}}</div></td>
+<td><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">{{$user['name']}}</div></td>
+<td><div style="border:1.5px solid;border-color:black;width:355px; margin:0 auto;">{{$user['email']}}</div></td>
+</tr></div>
 @endforeach
 </table>
 

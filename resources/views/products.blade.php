@@ -83,15 +83,15 @@
  @foreach($storeData as $product)
    <div class="product">
       <img src="{{$product->Image}}" alt=""> <!--  -->
-      <h3>Title: {{$product->Title}}</h3>
-      <h3>Description: {{$product->Description}}</h3>
+      <h3>Title:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  {{$product->Title}}</h3>
+      <h3>Description: <p>{{$product->Description}}</p></h3>
       <h3>Quantity: {{$product->Quantity}}</h3>
       <h3>£{{$product->Price}}</h3>
 
       <!-- get quantity from user with this form-->
       <form action="{{url('home',$product->id)}}" method="POST">
       @csrf
-      <input type= "number" value= "1" min="1" class="form" name="quantity">
+      <input style="border:1.5px solid;"type= "number" value= "1" min="1" class="form" name="quantity">
 
       <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
       </form>

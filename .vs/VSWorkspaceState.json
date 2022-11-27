@@ -11,6 +11,6 @@
     "\\resources",
     "\\resources\\views"
   ],
-  "SelectedNode": "\\artisan",
+  "SelectedNode": "\\resources\\views\\adminHome.blade.php",
   "PreviewInSolutionExplorer": false
 }
