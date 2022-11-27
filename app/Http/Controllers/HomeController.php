@@ -74,6 +74,8 @@ class HomeController extends Controller
     $product=Products::find($id); #get the id from the input of the user for the add to basket button
 
     $basket = new basket;
+    
+ 
 
     $product_quantity =$request->quantity;
     $product_price = $product->Price;
@@ -87,8 +89,21 @@ class HomeController extends Controller
     $basket->price=$totalOfProduct;
     $basket->quantity=$request->quantity;
     $basket->save();
+
+    $MaxQuantity = $product->Quantity;
+    $ToRemove = $request->quantity;
+    $TotalLeft = $MaxQuantity - $ToRemove;
+    $product->Quantity= $TotalLeft;
+
+    $product->save();
+
+    return redirect('/products');
     
-    return redirect('home');
+
+
+
+    
+    
 
 
 
