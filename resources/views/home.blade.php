@@ -76,8 +76,91 @@
 
 
 <!-- header section ends -->
+<h1>Your Basket</h1>
+<table>
+<tr>
+<td>Product</td>
+<td>Quantity</td>
+<td>Price</td>
+</tr>
+@foreach($baskets as $basket)
+<tr>
+<td>{{$basket['product_name']}}</td>
 
 
+<!--basket view-->
+<form action="{{url('update',$basket->id)}}" method="POST">
+      @csrf
+
+<td><input type= "number" value= "{{$basket['quantity']}}" min="1" class="form" name="quantity"></td>
+<td>£{{$basket['price']}}</td>
+
+
+
+<!--update button-->
+<td><button type="submit" onclick="myAlert()" class="btn">Update</button></td>
+      </form>
+
+      <!--Remove Button-->
+
+      <form action="{{url('remove',$basket->id)}}" method="POST">
+      @csrf
+
+<td><button type="submit" onclick="myAlert()" class="btn">remove</button></td>
+      </form>
+
+
+<!--end form-->
+
+</tr>
+@endforeach
+</table>
+
+
+
+<table>
+<tr>
+<td>Total</td>
+
+</tr>
+
+<tr>
+<td>{{$total}}</td>
+
+<br>
+<!--Delivery Address take input-->
+
+<form action="{{url('checkout',$basket->id)}}" method="POST">
+      @csrf
+<tr>
+<td>Name</td>
+</tr>
+<td><input type= "text" value= "" class="form" name="name"></td>
+
+
+<td><button type="submit" onclick="myAlert()" class="btn">Submit Order</button></td>
+</form>
+
+
+
+</tr>
+
+</table>
+
+
+
+
+      
+      
+     
+
+      
+
+
+
+  
+
+</div>
 
 
 </body>

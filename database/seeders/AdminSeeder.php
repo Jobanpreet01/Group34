@@ -25,6 +25,20 @@ class AdminSeeder extends Seeder
                'type'=>1,
                'password'=> bcrypt('Admin.01'),
             ],
+
+            [
+               'name'=>'Jo',
+               'email'=>'jo@gmail.com',
+               'type'=>0,
+               'password'=> bcrypt('jo01'),
+            ],
+
+            [
+               'name'=>'Joban',
+               'email'=>'joban@gmail.com',
+               'type'=>0,
+               'password'=> bcrypt('joban01'),
+            ],
         ];
     
         foreach ($users as $key => $user) {

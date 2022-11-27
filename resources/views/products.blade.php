@@ -39,7 +39,6 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -88,7 +87,15 @@
       <h3>Description: {{$product->Description}}</h3>
       <h3>Quantity: {{$product->Quantity}}</h3>
       <h3>£{{$product->Price}}</h3>
+
+      <!-- get quantity from user with this form-->
+      <form action="{{url('home',$product->id)}}" method="POST">
+      @csrf
+      <input type= "number" value= "1" min="1" class="form" name="quantity">
+
       <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
+      </form>
+
    </div>
 
    @endforeach
@@ -116,7 +123,6 @@
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
-      <a href="{{url('/basket')}}" class = "link"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
 
    </div>
