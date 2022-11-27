@@ -9,7 +9,8 @@
     "\\database\\migrations",
     "\\database\\seeders",
     "\\resources",
-    "\\resources\\views"
+    "\\routes"
   ],
+  "SelectedNode": "\\database\\migrations\\2022_11_24_233356_create_baskets_table.php",
   "PreviewInSolutionExplorer": false
 }
