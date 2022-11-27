@@ -163,7 +163,25 @@
 </table>
 
 
+<!--Show user's orders-->
 
+<h1>My Order History</h1>
+<table>
+<tr>
+<td>Product</td>
+<td>Quantity</td>
+<td>Price</td>
+<td>Ordered Places On Date:</td>
+</tr>
+@foreach($myorders as $order)
+<tr>
+<td>{{$order['product_name']}}</td>
+<td>{{$order['quantity']}}</td>
+<td>{{$order['price']}}</td>
+<td>{{$order['created_at']}}</td>
+</tr>
+@endforeach
+</table>
 
       
       
