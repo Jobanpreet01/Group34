@@ -92,10 +92,12 @@
       <!-- get quantity from user with this form-->
       <form action="{{url('home',$product->id)}}" method="POST">
       @csrf
-      <input type= "number" value= "1" min="1" class="form" name="quantity">
+      <input type= "number" value= "1" min="1" max="{{$product->Quantity}}" class="form" name="quantity">
 
-      <button type="submit" onclick="myAlert()" class="btn">Add to Basket</button>
+      <button type="submit" onclick="alert('Basket Updated Successfully')" class="btn">Add to Basket</button>
+
       </form>
+
 
    </div>
 
