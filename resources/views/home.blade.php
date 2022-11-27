@@ -110,15 +110,43 @@
       </form>
 
 
-
-
-
-
 <!--end form-->
 
 </tr>
 @endforeach
 </table>
+
+
+
+<table>
+<tr>
+<td>Total</td>
+
+</tr>
+
+<tr>
+<td>{{$total}}</td>
+
+<br>
+<!--Delivery Address take input-->
+
+<form action="{{url('checkout',$basket->id)}}" method="POST">
+      @csrf
+<tr>
+<td>Name</td>
+</tr>
+<td><input type= "text" value= "" class="form" name="name"></td>
+
+
+<td><button type="submit" onclick="myAlert()" class="btn">Submit Order</button></td>
+</form>
+
+
+
+</tr>
+
+</table>
+
 
 
 
