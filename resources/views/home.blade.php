@@ -154,7 +154,7 @@
 <td><input type= "date" value= "" class="form" name="expiry_date"></td>
 <td><input type= "password" value= "" class="form" name="cvv"></td>
 <br>
-<td><button type="submit" onclick="myAlert()" class="btn">Submit Order</button></td>
+<td><button type="submit" onclick="alert('Order Has Been Submitted')" class="btn">Checkout</button></td>
 </form>
 
 
