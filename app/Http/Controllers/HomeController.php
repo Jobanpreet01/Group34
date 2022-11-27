@@ -78,6 +78,7 @@ class HomeController extends Controller
     $totalOfProduct = $product_price*$product_quantity;
 
     $basket->user_id=$user->id;
+    $basket->product_id=$product->id;
     $basket->name=$user->name;
     $basket->email=$user->email;
     $basket->product_name=$product->Title;
@@ -137,19 +138,36 @@ class HomeController extends Controller
     }
 
 
-    public function addToOrders(Request $request, $id) #Request is needed everytime we get data from a form
+    public function addToOrders(Request $request) #Request is needed everytime we get data from a form
     {
 
     if(Auth::id()){ #if user is loged in
 
-    
-    $product=Products::find($id); #get the id from the input of the user for the add to basket button
-
+    $user_id = Auth::id();
+    $user = User::find($user_id);
+    $baskets1 = basket::where('user_id', Auth::id())->get();
     $order = new Orders;
 
-    
+    foreach($baskets1 as $basket){
+    $order = new Orders();
+
     $order->name=$request->name;
+    $order->user_id= $user_id;
+    $order->product_id= $basket->product_id;
+    $order->email= $basket->email; 
+    $order->product_name= $basket->product_name; 
+    $order->quantity= $basket->quantity; 
+    $order->price= $basket->price; 
+    $order->house_number=$request->house_number;
+    $order->street=$request->street_address;
+    $order->postcode=$request->post_code;
+    $order->city=$request->city;
+    $order->name=$request->name;
+    $order->name=$request->name;
+
     $order->save();
+
+    }
     
     return redirect('home');
 

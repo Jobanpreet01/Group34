@@ -116,31 +116,46 @@
 @endforeach
 </table>
 
-
-
 <table>
 <tr>
 <td>Total</td>
-
 </tr>
 
-<tr>
 <td>{{$total}}</td>
+</table>
 
 <br>
 <!--Delivery Address take input-->
 
-<form action="{{url('checkout',$basket->id)}}" method="POST">
-      @csrf
+<table>
 <tr>
 <td>Name</td>
+<td>House Number</td>
+<td>Street Address</td>
+<td>Post Code</td>
+<td>City</td>
+<td>Card Number</td>
+<td>Expiry Date</td>
+<td>Cvv Number</td>
+
 </tr>
+
+
+
+<form action="{{url('checkout')}}" method="POST">
+      @csrf
+<tr>
 <td><input type= "text" value= "" class="form" name="name"></td>
-
-
+<td><input type= "text" value= "" class="form" name="house_number"></td>
+<td><input type= "text" value= "" class="form" name="street_address"></td>
+<td><input type= "text" value= "" class="form" name="post_code"></td>
+<td><input type= "text" value= "" class="form" name="city"></td>
+<td><input type= "text" value= "" class="form" name="card_number"></td>
+<td><input type= "date" value= "" class="form" name="expiry_date"></td>
+<td><input type= "password" value= "" class="form" name="cvv"></td>
+<br>
 <td><button type="submit" onclick="myAlert()" class="btn">Submit Order</button></td>
 </form>
-
 
 
 </tr>

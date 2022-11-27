@@ -28,7 +28,7 @@ Route::get('/basket', 'App\Http\Controllers\Version1Controller@basket');
 Route::get('/checkout', 'App\Http\Controllers\Version1Controller@checkout');
 Route::post('update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
 Route::post('remove/{id}', [App\Http\Controllers\HomeController::class, 'remove']);
-Route::post('checkout/{id}', [App\Http\Controllers\HomeController::class, 'addToOrders']);
+Route::post('checkout', [App\Http\Controllers\HomeController::class, 'addToOrders']);
 
 
 
