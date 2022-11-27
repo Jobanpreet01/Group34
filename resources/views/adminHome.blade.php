@@ -80,7 +80,7 @@
 <h1>List of Users</h1>
 <table>
 <tr>
-<td>ID</td>
+<td>User ID</td>
 <td>Name</td>
 <td>Email</td>
 </tr>
