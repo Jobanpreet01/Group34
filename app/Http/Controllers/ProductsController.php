@@ -14,7 +14,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $storeData = Products::all(); #store data from table
+        $min = 1;
+        $storeData = Products::where('Quantity', '>=', $min)->get();
+        #$storeData = Products::all(); #store data from table
         return view('products', compact('storeData')); # bring data into the products page
+        
+        
+
+        
+
     }
 }
