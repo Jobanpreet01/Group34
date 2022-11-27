@@ -32,10 +32,11 @@ class HomeController extends Controller
     {
 
        $baskets = basket::where('user_id', Auth::id())->get();  #get basket items where field 'user-id' in basket table is == to Auth::id
+       $myorders = Orders::where('user_id', Auth::id())->get();
        $total = basket::where('user_id', Auth::id())->sum('price');
 
 
-        return view('home', compact('baskets', 'total')); # return /home + stored data
+        return view('home', compact('baskets', 'total','myorders')); # return /home + stored data
 
 
 
@@ -54,7 +55,8 @@ class HomeController extends Controller
     {
         $store = User::all(); #store users in $store
         $products = Products::all(); #store products in this variable
-    return view('adminHome', ['members' => $store], compact('products')); #memebers is a key that can be used as a variables in html page using $members
+        $orders = Orders::all(); #store products in this variable
+    return view('adminHome', ['members' => $store], compact('products','orders')); #memebers is a key that can be used as a variables in html page using $members
     }
 
     /**
