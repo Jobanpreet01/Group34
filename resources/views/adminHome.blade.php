@@ -116,6 +116,44 @@
 
 
 
+<h1>All orders from users</h1>
+<table>
+<tr>
+<td>Order ID</td>
+<td>User ID</td>
+<td>Product ID</td>
+<td>Product Name</td>
+<td>Quantity</td>
+<td>Price</td>
+<td>Placed On Date:</td>
+<td>Email Address</td>
+<td>Name For Delivery</td>
+<td>House Number</td>
+<td>Street Address</td>
+<td>Post Code</td>
+
+</tr>
+@foreach($orders as $order)
+<tr>
+<td>{{$order['id']}}</td>
+<td>{{$order['user_id']}}</td>
+<td>{{$order['product_id']}}</td>
+<td>{{$order['product_name']}}</td>
+<td>{{$order['quantity']}}</td>
+<td>{{$order['price']}}</td>
+<td>{{$order['created_at']}}</td>
+<td>{{$order['email']}}</td>
+<td>{{$order['name']}}</td>
+<td>{{$order['house_number']}}</td>
+<td>{{$order['street']}}</td>
+<td>{{$order['postcode']}}</td>
+
+</tr>
+@endforeach
+</table>
+
+
+
 
 
 </body>
