@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('postcode')->nullable();
             $table->string('city')->nullable();
             $table->string('email')->nullable();
+            $table->string('product_id')->nullable();
             $table->string('product_name')->nullable();
             $table->string('quantity')->nullable();
             $table->string('price')->nullable();
