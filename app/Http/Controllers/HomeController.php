@@ -167,6 +167,10 @@ class HomeController extends Controller
 
     $order->save();
 
+    DB::table('baskets')
+    ->where('id', $basket->id)
+    ->delete();
+
     }
     
     return redirect('home');
