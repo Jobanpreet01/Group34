@@ -6,7 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Home</title>
-
+   <link rel="shortcut icon" type="image/png" href="images/fav2.png"/>
+   
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -40,7 +41,6 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -95,7 +95,7 @@
       
       <div class="swiper-wrapper">
 
-         <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://www.netscribes.com/technology-watch/ -->
+         <section class="swiper-slide slide" style="background: url(images/L.png);">
             <div class="content">
                </div>
          </section>
@@ -127,7 +127,6 @@
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
-      <a href="{{url('/basket')}}" class = "link"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
 
    </div>
