@@ -45,10 +45,10 @@ class AdminSeeder extends Seeder
             User::create($user);
         }
         
-/**
+
         $products = [
             [
-               'Title'=>'Phone 14',
+               'Title'=>'IPhone 14',
                'Price'=> 1000,
                'Description'=>'This Iphone is unique',
                'Quantity'=> 20,
@@ -56,23 +56,23 @@ class AdminSeeder extends Seeder
             ],
 
             [
-               'Title'=>'HPST Laptop',
+               'Title'=>'HP Laptop',
                'Price'=> 1200,
-               'Description'=>'This Laptop can run Games',
+               'Description'=>'This Laptop can run GTA5',
                'Quantity'=> 8,
                'Image'=>'images/hp.webp',
             ],
 
             [
-               'Title'=>'PSGame5',
+               'Title'=>'PS5',
                'Price'=> 850,
-               'Description'=>'This PSGame5 is Fast',
+               'Description'=>'This PS5 is Fast',
                'Quantity'=> 0,
                'Image'=>'images/PS5.webp',
             ],
 
             [
-               'Title'=>'Samsun TV',
+               'Title'=>'Samsung TV',
                'Price'=> 490,
                'Description'=>'This TV is Great',
                'Quantity'=> 12,
@@ -83,8 +83,6 @@ class AdminSeeder extends Seeder
         foreach ($products as $key => $product) {
             Products::create($product);
         }
-
-        */
 
     }
 }

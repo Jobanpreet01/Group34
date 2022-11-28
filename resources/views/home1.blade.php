@@ -40,6 +40,7 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
+      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -94,86 +95,14 @@
       
       <div class="swiper-wrapper">
 
-         <section class="swiper-slide slide" style="background: url(images/Logo.png);" >
+         <section class="swiper-slide slide" style="background: url(images/Technology-Watch.jpg);"> <!-- https://www.netscribes.com/technology-watch/ -->
             <div class="content">
-            <h3>Welcome To Vitality Electronics</h3>
                </div>
          </section>
       </div>
       </div>
 
 </section>
-
-<section class="contact-me">
-
-<h1 class="heading"> Our Influence Worldwide </h1>
-
-<div class="submit">
-
-   <div class="icons">
-      <i class="fas fa-globe"></i>
-      <h3>Global Reach :</h3>
-      <p>We are currently located in 108 countries and this is still expanding with us located in Europe, Asia, North and South America.</p>
-   </div>
-
-   <div class="icons">
-      <i class="fas fa-dollar"></i>
-      <h3>Total Revenue :</h3>
-      <p>In 2021 we had our best sales yet with revenue at 300 million which was reflected in our global expansion and expansion of tech products being sold.</p>
-   </div>
-
-   <div class="icons">
-      <i class="fas fa-phone"></i>
-      <h3>Customer Service : </h3>
-      <p>At vitalityelectronics we provide the best customer care by replying to you within 24 hours of your query and we strive for this to provide the best possible customer experience.</p>
-   </div>
-
-   <div class="icons">
-      <i class="fas fa-truck"></i>
-      <h3>Delivery :</h3>
-      <p>We provide free delivery for orders over £50 and provide next day delivery.</p>
-   </div>
-
-</div>
-
-<section class="contact-me">
-
-<h1 class="heading"> What We Specialise In </h1>
-
-<div class="submit">
-
-   <div class="icons">
-      <i class="fas fa-phone"></i>
-      <h3>Phones</h3>
-   </div>
-
-   <div class="icons">
-      <i class="fas fa-laptop"></i>
-      <h3>Laptops</h3>
-      </div>
-
-   <div class="icons">
-      <i class="fas fa-tv"></i>
-      <h3>TVs</h3>
-      </div>
-
-   <div class="icons">
-      <i class="fas fa-gamepad"></i>
-      <h3>Consoles</h3>
-      </div>
-
-      <div class="icons">
-      <i class="fas fa-headphones"></i>
-      <h3>Headphones</h3>
-      </div>
-      
-      <div class="icons">
-      <i class="fas fa-print"></i>
-      <h3>Printers</h3>
-      </div>
-
-</div>
-
 
 <!-- home section ends -->
    
@@ -198,6 +127,7 @@
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a href="{{url('/basket')}}" class = "link"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
 
    </div>
