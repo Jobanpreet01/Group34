@@ -126,7 +126,7 @@ class AdminSeeder extends Seeder
                'Price'=> 849,
                'Description'=>'This Phone can Fold',
                'Quantity'=> 4,
-               'Image'=>'samsung-flip.jpg',
+               'Image'=>'samsungflip.jpg',
             ],
 
             [
@@ -134,7 +134,7 @@ class AdminSeeder extends Seeder
                'Price'=> 449,
                'Description'=>'This Xbox is Fast',
                'Quantity'=> 8,
-               'Image'=>'x-box.jpg',
+               'Image'=>'xbox.jpg',
             ],
 
             [
@@ -142,7 +142,7 @@ class AdminSeeder extends Seeder
                'Price'=> 259,
                'Description'=>'This Console is Great',
                'Quantity'=> 56,
-               'Image'=>'nintendo-switch.jpg',
+               'Image'=>'nintendoswitch.jpg',
             ],
         ];
     
