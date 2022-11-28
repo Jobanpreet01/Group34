@@ -7,10 +7,10 @@
     "\\app\\Models",
     "\\database",
     "\\database\\migrations",
-    "\\database\\seeders",
-    "\\public",
-    "\\public\\images"
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\auth"
   ],
-  "SelectedNode": "\\database\\seeders\\AdminSeeder.php",
+  "SelectedNode": "\\resources\\views\\products.blade.php",
   "PreviewInSolutionExplorer": false
 }

@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('product_name')->nullable();
             $table->string('quantity')->nullable();
             $table->string('price')->nullable();
+            $table->string('orderStatus')->nullable();
             $table->timestamps();
         });
     }

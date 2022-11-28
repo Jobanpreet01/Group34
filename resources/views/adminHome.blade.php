@@ -108,11 +108,26 @@
 <td>{{$product['id']}}</td>
 <td>{{$product->Title}}</td>
 <td>{{$product->Description}}</td>
-<td>{{$product->Quantity}}</td>
+
+<form action="{{url('updatequantity',$product->id)}}" method="POST">
+      @csrf
+<td><input type= "number" value= "{{$product->Quantity}}" min="0" class="form" name="quantity"></td>
+<!--update button-->
+<td><button type="submit" onclick="myAlert()" class="btn">Update Quantity</button></td>
+      </form>
+
 <td>£{{$product->Price}}</td>
 </tr>
 @endforeach
 </table>
+
+
+
+
+
+
+
+
 
 
 
@@ -131,6 +146,8 @@
 <td>House Number</td>
 <td>Street Address</td>
 <td>Post Code</td>
+<td>Order Status</td>
+<td>Change Order Status</td>
 
 </tr>
 @foreach($orders as $order)
@@ -147,7 +164,41 @@
 <td>{{$order['house_number']}}</td>
 <td>{{$order['street']}}</td>
 <td>{{$order['postcode']}}</td>
+<td>{{$order['orderStatus']}}</td>
 
+<form action="{{url('updateStatus',$order->id)}}" method="POST">
+      @csrf
+
+<td><select id="order status" name="newStatus">
+  <option value="Placed">Placed</option>
+  <option value="Dispached">Dispached</option>
+  <option value="Delivered">Delivered</option>
+</select></td>
+<!--update button-->
+<td><button type="submit" onclick="myAlert()" class="btn">Update Order Status</button></td>
+      </form>
+
+</tr>
+@endforeach
+</table>
+
+
+
+<h1>Customers' Queries</h1>
+<table>
+<tr>
+<td>Query ID</td>
+<td>Email</td>
+<td>Name</td>
+<td>Query</td>
+
+</tr>
+@foreach($queries as $query)
+<tr>
+<td>{{$query['id']}}</td>
+<td>{{$query['email']}}</td>
+<td>{{$query['name']}}</td>
+<td>{{$query['query']}}</td>
 </tr>
 @endforeach
 </table>

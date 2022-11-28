@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Products;
 use App\Models\basket;
 use App\Models\Orders;
+use App\Models\Queries;
 use Illuminate\Support\Facades\Auth;
 use DB;
 
@@ -56,7 +57,8 @@ class HomeController extends Controller
         $store = User::all(); #store users in $store
         $products = Products::all(); #store products in this variable
         $orders = Orders::all(); #store products in this variable
-    return view('adminHome', ['members' => $store], compact('products','orders')); #memebers is a key that can be used as a variables in html page using $members
+        $queries = Queries::all(); #store products in this variable
+    return view('adminHome', ['members' => $store], compact('products','orders','queries')); #memebers is a key that can be used as a variables in html page using $members
     }
 
     /**
@@ -128,7 +130,6 @@ class HomeController extends Controller
     DB::table('baskets')
     ->where('id', $id)
     ->update(array('quantity' => $request->quantity));
-    
 
     return redirect('home');
     
@@ -154,6 +155,28 @@ class HomeController extends Controller
 
     }
 
+    #admin updatequantity
+    public function updatequantity(Request $request, $id){
+
+    DB::table('products')
+    ->where('id', $id)
+    ->update(array('Quantity' => $request->quantity));
+
+    return redirect('/admin');
+   
+    }
+
+
+    #admin update order status of purchase
+    public function updateStatus(Request $request, $id){
+
+    DB::table('orders')
+    ->where('id', $id)
+    ->update(array('orderStatus' => $request->newStatus));
+
+    return redirect('/admin');
+   
+    }
 
     public function addToOrders(Request $request) #Request is needed everytime we get data from a form
     {
@@ -181,6 +204,7 @@ class HomeController extends Controller
     $order->city=$request->city;
     $order->name=$request->name;
     $order->name=$request->name;
+    $order->orderStatus='Placed';
 
     $order->save();
 
@@ -197,8 +221,8 @@ class HomeController extends Controller
      #stay on same page
     }
     
-    
 
+    
     
 }
 }
