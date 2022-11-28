@@ -601,3 +601,38 @@ section {
   background-image: linear-gradient(to bottom right, #c0ecdf, #0eb582);
   font-size: 25px;
 }
+
+.heading-link-2 {
+  text-align: center;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.heading-link-2 h3 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+.heading-link-2 p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
+}
+
+.heading-link-2 p a {
+  color: #0eb582;
+}
+
+.heading-link-2 p a:hover {
+  text-decoration: underline;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
