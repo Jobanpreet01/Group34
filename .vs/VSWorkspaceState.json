@@ -8,8 +8,9 @@
     "\\database",
     "\\database\\migrations",
     "\\database\\seeders",
-    "\\resources",
-    "\\resources\\views"
+    "\\public",
+    "\\public\\images"
   ],
+  "SelectedNode": "\\database\\seeders\\AdminSeeder.php",
   "PreviewInSolutionExplorer": false
 }

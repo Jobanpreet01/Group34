@@ -48,7 +48,9 @@ class AdminSeeder extends Seeder
 
         $products = [
             [
-               'Title'=>'iPhone 14',
+
+               'Title'=>'IPhone 14',
+
                'Price'=> 1000,
                'Description'=>'This Iphone is unique',
                'Quantity'=> 20,
@@ -147,8 +149,6 @@ class AdminSeeder extends Seeder
         foreach ($products as $key => $product) {
             Products::create($product);
         }
-
-        
 
     }
 }
