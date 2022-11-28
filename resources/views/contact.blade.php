@@ -108,18 +108,19 @@
 
 <div class="main">
 
-   <form == "" class="form-container">
+   <form action = "{{url('/contact')}}" class="form-container">
+   @csrf
 
        <label for="email">Email</label>
-       <input type="text" id="email" placeholder="Enter Email" class="box" name="email" required>
+       <input type="text" id="email" placeholder="Enter Email" class="box" name="email1" required = "Please Insert Email">
 
        <label for="name">Name</label>
-       <input type="text" id="name" placeholder="Name" class="box" name="name" required>
+       <input type="text" id="name" placeholder="Name" class="box" name="name1" required = "Please Insert Name">
 
        <label for="query">Query</label>
-       <input type="text" id="query" placeholder="Query" class="box" name="query" required>
+       <input type="text" id="query" placeholder="Query" class="box" name="query1" required = "Please Insert Your Query">
 
-       <button type="submit" onclick="myAlert()" class="btn">Send Message</button>
+       <button type="submit" onclick="" class="btn">Send Message</button>
        
    </form>
 </div>

@@ -125,6 +125,7 @@
 </table>
 
 <br>
+
 <!--Delivery Address take input-->
 
 <table>
@@ -154,6 +155,8 @@
 <td><input type= "date" value= "" class="form" name="expiry_date"></td>
 <td><input type= "password" value= "" class="form" name="cvv"></td>
 <br>
+
+<!--Submit Order-->
 <td><button type="submit" onclick="alert('Order Has Been Submitted')" class="btn">Checkout</button></td>
 </form>
 
@@ -171,6 +174,7 @@
 <td>Product</td>
 <td>Quantity</td>
 <td>Price</td>
+<td>Order Status</td>
 <td>Ordered Places On Date:</td>
 </tr>
 @foreach($myorders as $order)
@@ -178,6 +182,7 @@
 <td>{{$order['product_name']}}</td>
 <td>{{$order['quantity']}}</td>
 <td>{{$order['price']}}</td>
+<td>{{$order['orderStatus']}}</td>
 <td>{{$order['created_at']}}</td>
 </tr>
 @endforeach
