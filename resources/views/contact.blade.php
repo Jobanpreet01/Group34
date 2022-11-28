@@ -5,7 +5,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Contact Us</title>
-
+   <link rel="shortcut icon" type="image/png" href="images/fav2.png"/>
+   
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -37,15 +38,31 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
       @endguest
 
-      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{url('/home')}}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+      <?php if(auth()->user()->type ?? 1): ?>
+      <a id="navbarDropdown" class="nav-link dropdown-toggle" 
+        href= "{{url('/home')}}"
+    
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
          {{ @Auth::user()->name }}
       </a>
+      <?php endif; ?>
+      
+
+
+      
+      <?php if(auth()->user()->type ?? 0): ?>
+      <a id="navbarDropdown" class="nav-link dropdown-toggle" 
+        href= "{{url('/admin')}}"
+    
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+         Admin
+      </a>
+      <?php endif; ?>
    </nav>
 
 </header>
@@ -60,6 +77,25 @@
       <section class="contact-me">
 
 <h1 class="heading"> get in touch </h1>
+
+<div class="main">
+
+   <form action = "{{url('/contact')}}" class="form-container">
+   @csrf
+
+       <label for="email">Email</label>
+       <input type="text" id="email" placeholder="Enter Email" class="box" name="email1" required = "Please Insert Email">
+
+       <label for="name">Name</label>
+       <input type="text" id="name" placeholder="Name" class="box" name="name1" required = "Please Insert Name">
+
+       <label for="query">Query</label>
+       <input type="text" id="query" placeholder="Query" class="box" name="query1" required = "Please Insert Your Query">
+
+       <button type="submit" onclick="" class="btn">Send Message</button>
+       
+   </form>
+</div>
 
 <div class="submit">
 
@@ -88,24 +124,6 @@
    </div>
 
 </div>
-
-
-<div class="main">
-
-   <form == "" class="form-container">
-
-       <label for="email">Email</label>
-       <input type="text" id="email" placeholder="Enter Email" class="box" name="email" required>
-
-       <label for="name">Name</label>
-       <input type="text" id="name" placeholder="Name" class="box" name="name" required>
-
-       <label for="query">Query</label>
-       <input type="text" id="query" placeholder="Query" class="box" name="query" required>
-
-       <button type="submit" onclick="myAlert()" class="btn">Send Message</button>
-   </form>
-</div>
 </section>
 
 <section class="footer">
@@ -126,7 +144,6 @@
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
-      <a href="{{url('/basket')}}" class = "link"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       </div>
 
    </div>
@@ -139,7 +156,5 @@
 </html>
 
 <style type="text/css">
-
-
 </body>
 </html>
