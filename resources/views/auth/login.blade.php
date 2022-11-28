@@ -51,12 +51,10 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
    </nav>
 
 </header>
-
 
 
 <main class="py-4">
@@ -66,7 +64,10 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
-
+                <section class="heading-link-2">
+   <h3>Login</h3>
+   <p> In order to place and order with us you must first create an account </p> <!-- links the home heading on the contact me page back to the home page -->
+</section>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
