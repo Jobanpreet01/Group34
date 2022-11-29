@@ -49,6 +49,7 @@
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
       <a href="{{url('/')}}">Home</a>
+      <a href="{{url('/about')}}">About Us</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
