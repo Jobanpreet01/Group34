@@ -15,6 +15,7 @@
    <link rel = "stylesheet" type= "text/css" href="css/Style.css" />
 
    <script src= "js/script.js"></script> <!-- links the javascript to the page -->
+   <script src= "searchbar.js"> </script>
 
 </head>
 <body>
@@ -27,8 +28,8 @@
 </head>
 
 </html>
-   
-<!-- header section starts  -->
+      
+   <!-- header section starts  -->
 
 <header class="main-header">
 
@@ -40,6 +41,7 @@
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -52,9 +54,13 @@
 
 </header>
 
-<!-- header section ends -->
+   <!-- header section ends -->
 
-<section class="heading-link">
+
+<section class="products">
+
+
+   <section class="heading-link">
    <h3>Products</h3>
    <p> <a href="index.php">home</a> / products </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
@@ -62,6 +68,10 @@
       <section class="products">
 
 <h1 class="heading">Our Products</h1>
+
+<div>
+      <input class=search-bar type="text" name="" id="search" placeholder="search for products..." onkeyup="searchBar()">
+   </div>
 
 <div class="box-container"> <!-- creates the box for the image and text to be placed in -->
 
@@ -150,7 +160,7 @@
          <p>Welcome to our e-commerce website where we sell a large range of tech products. This company has been going for 15 years and we are proud to have over 100 million users and we are located all over the world with many connections in all parts of the world, which has allowed for us to expand globally and a fast rate. We look forward to you shopping with us and if you have any queries please feel free to find our contact details under the contacts section.</p>
          <div class="share">
 
-         
+            
 </div>
       </div>
 
@@ -160,6 +170,7 @@
          <a href="products.php" class="link">Products</a>
          <a href="contact.php" class="link">Contact Us</a>
          <a href="basket.php" class="link">Basket</a>
+         <a href="about.php" class="link">About us</a>
       </div>
 
    </div>
@@ -167,9 +178,26 @@
    <div class="credit"> created by <span>Group 34</span></div>
 
 </section>
+<script type="text/javascript">
+function searchBar() {
+  let searchText = document.getElementById('search').value.toUpperCase();
+  let product = document.querySelectorAll('.product')
+  let productName = document.getElementsByTagName('h3')
 
-</body>
-</html>
+  for (var i = 0; i < productName.length; i++) {
+    let match = product[i].getElementsByTagName('h3')[0];
+    let textvalue = match.textContent || match.innerHTML || match.innerText
+    if (match) {
 
+
+      if (textvalue.toUpperCase().indexOf(searchText) > -1) {
+        product[i].style.display ="";
+      } else {
+        product[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
