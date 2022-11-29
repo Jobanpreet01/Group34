@@ -41,8 +41,6 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
-
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
       <a href="{{url('/about')}}">About Us</a>
 
 
@@ -94,19 +92,45 @@
       <input class=search-bar type="text" name="" id="search" placeholder="search for products..." onkeyup="searchBar()">
    </div>
 
+   <!-- h4 used for for text description of the products in list -->
+   <style>
+   h4{
+text-align: left;
+padding-bottom: 5px;
+text-transform: uppercase;
+font-size: 10px;
+color: #0D7354;
+}
+
+h5{
+font-size: 8px;
+text-align: left;
+}
+
+.selectQuantity{
+text-align: center;
+width:145px;
+background-color: #d1e0e0;
+}
+
+</style>
 <div class="box-container"> <!-- creates the box for the image and text to be placed in -->
  @foreach($storeData as $product)
    <div class="product">
       <img src="{{$product->Image}}" alt=""> <!--  -->
-      <h3>Title: {{$product->Title}}</h3>
-      <h3>Description: {{$product->Description}}</h3>
-      <h3>Quantity: {{$product->Quantity}}</h3>
-      <h3>£{{$product->Price}}</h3>
-
+      <p><h4>Title:</h4> <h5>{{$product->Title}}</h5></p>
+      <br>
+      <p><h4>Description:</h4> <h5>{{$product->Description}}</h5></p>
+      <br>
+      <p><h4>Quantity Available:</h4> <h5>{{$product->Quantity}}</h5></p>
+      <br>
+      <p><h4>Price:</h4><h5>£{{$product->Price}}</h5></p>
+      <br>
+      <br>
       <!-- get quantity from user with this form-->
       <form action="{{url('home',$product->id)}}" method="POST">
       @csrf
-      <input type= "number" value= "1" min="1" max="{{$product->Quantity}}" class="form" name="quantity">
+      <input type= "number" value="1" min="1" max="{{$product->Quantity}}" class="selectQuantity" name="quantity">
 
       <button type="submit" onclick="alert('Basket Updated Successfully')" class="btn">Add to Basket</button>
 
@@ -136,17 +160,12 @@
       </div>
 
       <div class="box">
-         <h3>quick links</h3>
-
-         <a href="index.php" class="link">Home</a> <!-- allows the user to navigate through the pages using the links in the footer -->
-         <a href="products.php" class="link">Products</a>
-         <a href="contact.php" class="link">Contact Us</a>
-         <a href="basket.php" class="link">Basket</a>
-         <a href="about.php" class="link">About us</a>
+         <h3>Quick Links</h3>
 
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a href="{{url('/about')}}" class = "link">About Us</a>
 
       </div>
 

@@ -167,6 +167,7 @@ section {
   color: #0eb582;
   cursor: pointer;
   text-transform: capitalize;
+ 
 }
 
 .btn:hover {
@@ -282,7 +283,7 @@ section {
 }
 
 .footer {
-  background: #f0fdfa;
+  background: #9DECCC;
 }
 
 .footer .box-container {
@@ -650,3 +651,5 @@ section {
   text-transform: capitalize;
   color: #444;
 }
+
+
