@@ -37,6 +37,7 @@
    
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the user to select the page they want using the navigation bar at the top -->
       <a href="{{url('/')}}">Home</a>
+      <a href="{{url('/about')}}">About Us</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
