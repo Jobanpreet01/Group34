@@ -10,7 +10,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css"> <!-- links the styles sheet to this page -->
+   <link rel="stylesheet" href="css/Style.css"> <!-- links the styles sheet to this page -->
 
    <link rel = "stylesheet" type= "text/css" href="css/Style.css" />
 
@@ -49,6 +49,7 @@
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
       <a href="{{url('/')}}">Home</a>
+      <a href="{{url('/about')}}">About Us</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -73,19 +74,52 @@
 
 </header>
 
+<br>
 
 
 <!-- header section ends -->
-<h1>Your Basket</h1>
+<style>
+.container {
+    width: 0 auto; height:200px; border: 0px solid black; margin: 0 auto;
+}
+.row {
+    width:0 auto; height:0 auto; border: 2px solid black; margin:0 auto; font: 10px  Arial, sans-serif; text-align: center; background-color: #90ee99; 
+}
+.product,.quantity,.price{
+    margin: 0 auto; background-color: rgb(211,211,211);
+}
+.col{
+    width: 0 auto; height:0 auto;
+}
+table, th, {
+  border: 2px solid black;
+}
+td {
+  text-align: center;
+}
+.btn {
+    background-color: #99ee99;
+    margin-top: 0.3rem;
+}
+.checkoutSec{
+    background-color: rgb(211,211,211); margin: 1px;
+
+
+}
+</style>
+<div class="container">
+<br>
+<div class="row"><h1>Your Basket</h1></div>
 <table>
+<br>
 <tr>
-<td>Product</td>
-<td>Quantity</td>
-<td>Price</td>
+<td><div class"col"><div class="product"><h2>&nbsp Product &nbsp</h2></div></div></td>
+<td><div class"col"><div class="quantity"><h2>&nbsp Quantity &nbsp</h2></div></div></td>
+<td><div class"col"><div class="price"><h2>&nbsp Price &nbsp</h2></div></div></td>
 </tr>
 @foreach($baskets as $basket)
 <tr>
-<td>{{$basket['product_name']}}</td>
+<td>&nbsp{{$basket['product_name']}}</td>
 
 
 <!--basket view-->
@@ -118,26 +152,29 @@
 
 <table>
 <tr>
-<td>Total</td>
+<td><h3>Total = &nbsp</td><td>£{{$total}}</td>
 </tr>
 
-<td>{{$total}}</td>
-</table>
 
+</table>
+</div>
 <br>
 
 <!--Delivery Address take input-->
+<div class="container">
+<br>
+<div class="row"><h1> Checkout </h1></div>
 
 <table>
 <tr>
-<td>Name</td>
-<td>House Number</td>
-<td>Street Address</td>
-<td>Post Code</td>
-<td>City</td>
-<td>Card Number</td>
-<td>Expiry Date</td>
-<td>Cvv Number</td>
+<td><div class"col"><div class="checkoutSec"><h3>Name</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>House Number</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>Street Address</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>Post Code</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>City</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>Card Number</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>Expiry Date</h3></div></div></td>
+<td><div class"col"><div class="checkoutSec"><h3>Cvv Number</h3></div></div></td>
 
 </tr>
 
@@ -164,11 +201,13 @@
 </tr>
 
 </table>
-
-
+</div>
+<br>
 <!--Show user's orders-->
 
-<h1>My Order History</h1>
+<div class="container">
+<br>
+<div class="row"><h1>My Order History</h1></div>
 <table>
 <tr>
 <td>Product</td>
@@ -187,7 +226,7 @@
 </tr>
 @endforeach
 </table>
-
+</div>
       
       
      

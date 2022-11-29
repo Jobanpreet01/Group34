@@ -45,7 +45,7 @@
 
 <header class="main-header">
 
-   <a href="#" class="logo"> <i class="fas fa-id-card"></i></a>
+    <a href="{{url('/')}}" class="logo"><img src="images/Fav.png" alt="Logo2" width="50" height="50"></a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
@@ -68,7 +68,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
                 <section class="heading-link-2">
    <h3>Login</h3>
-   <p> In order to place and order with us you must first create an account </p> <!-- links the home heading on the contact me page back to the home page -->
+   <p> In order to place an order with us you must first create an account </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
                 <div class="card-body">
