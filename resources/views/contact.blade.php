@@ -44,6 +44,7 @@
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
       @endguest
 
+      <?php if(@Auth::user()->name != 'Admin') : ?>
       <?php if(auth()->user()->type ?? 1): ?>
       <a id="navbarDropdown" class="nav-link dropdown-toggle" 
         href= "{{url('/home')}}"
@@ -51,6 +52,7 @@
           role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
          {{ @Auth::user()->name }}
       </a>
+      <?php endif; ?>
       <?php endif; ?>
       
 
@@ -64,6 +66,7 @@
          Admin
       </a>
       <?php endif; ?>
+     
    </nav>
 
 </header>
