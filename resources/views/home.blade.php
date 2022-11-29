@@ -77,8 +77,129 @@
 
 
 <!-- header section ends -->
+<h1>Your Basket</h1>
+<table>
+<tr>
+<td>Product</td>
+<td>Quantity</td>
+<td>Price</td>
+</tr>
+@foreach($baskets as $basket)
+<tr>
+<td>{{$basket['product_name']}}</td>
 
 
+<!--basket view-->
+<form action="{{url('update',$basket->id)}}" method="POST">
+      @csrf
+
+<td><input type= "number" value= "{{$basket['quantity']}}" min="1" class="form" name="quantity"></td>
+<td>£{{$basket['price']}}</td>
+
+
+
+<!--update button-->
+<td><button type="submit" onclick="myAlert()" class="btn">Update</button></td>
+      </form>
+
+      <!--Remove Button-->
+
+      <form action="{{url('remove',$basket->id)}}" method="POST">
+      @csrf
+
+<td><button type="submit" onclick="myAlert()" class="btn">remove</button></td>
+      </form>
+
+
+<!--end form-->
+
+</tr>
+@endforeach
+</table>
+
+<table>
+<tr>
+<td>Total</td>
+</tr>
+
+<td>{{$total}}</td>
+</table>
+
+<br>
+
+<!--Delivery Address take input-->
+
+<table>
+<tr>
+<td>Name</td>
+<td>House Number</td>
+<td>Street Address</td>
+<td>Post Code</td>
+<td>City</td>
+<td>Card Number</td>
+<td>Expiry Date</td>
+<td>Cvv Number</td>
+
+</tr>
+
+
+
+<form action="{{url('checkout')}}" method="POST">
+      @csrf
+<tr>
+<td><input type= "text" value= "" class="form" name="name"></td>
+<td><input type= "text" value= "" class="form" name="house_number"></td>
+<td><input type= "text" value= "" class="form" name="street_address"></td>
+<td><input type= "text" value= "" class="form" name="post_code"></td>
+<td><input type= "text" value= "" class="form" name="city"></td>
+<td><input type= "text" value= "" class="form" name="card_number"></td>
+<td><input type= "date" value= "" class="form" name="expiry_date"></td>
+<td><input type= "password" value= "" class="form" name="cvv"></td>
+<br>
+
+<!--Submit Order-->
+<td><button type="submit" onclick="alert('Order Has Been Submitted')" class="btn">Checkout</button></td>
+</form>
+
+
+</tr>
+
+</table>
+
+
+<!--Show user's orders-->
+
+<h1>My Order History</h1>
+<table>
+<tr>
+<td>Product</td>
+<td>Quantity</td>
+<td>Price</td>
+<td>Order Status</td>
+<td>Ordered Places On Date:</td>
+</tr>
+@foreach($myorders as $order)
+<tr>
+<td>{{$order['product_name']}}</td>
+<td>{{$order['quantity']}}</td>
+<td>{{$order['price']}}</td>
+<td>{{$order['orderStatus']}}</td>
+<td>{{$order['created_at']}}</td>
+</tr>
+@endforeach
+</table>
+
+      
+      
+     
+
+      
+
+
+
+  
+
+</div>
 
 
 </body>
