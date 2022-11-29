@@ -39,9 +39,9 @@
    
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the user to select the page they want using the navigation bar at the top -->
       <a href="{{url('/')}}">Home</a>
-      <a href="{{url('/about')}}">About Us</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
+      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -89,7 +89,7 @@
 <!-- header section ends -->
 
 <!-- home section starts  -->
-
+<section class="products">
 <section class="home">
 
    <div class="swiper home-slider">
@@ -105,9 +105,11 @@
       </div>
 
 </section>
+</section>
+
 
 <section class="contact-me">
-
+<section class="products">
 <h1 class="heading"> Our Influence Worldwide </h1>
 
 <div class="submit">
@@ -137,8 +139,9 @@
    </div>
 
 </div>
+</section>
 
-<section class="contact-me">
+
 
 <h1 class="heading"> What We Specialise In </h1>
 
@@ -168,11 +171,7 @@
       <i class="fas fa-headphones"></i>
       <h3>Headphones</h3>
       </div>
-      
-      <div class="icons">
-      <i class="fas fa-print"></i>
-      <h3>Printers</h3>
-      </div>
+     
 
 </div>
 
@@ -195,17 +194,20 @@
       </div>
 
       <div class="box">
-         <h3>quick links</h3>
+         <h3>Quick Links</h3>
+
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a href="{{url('/about')}}" class = "link">About Us</a>
+
       </div>
 
    </div>
 
    <div class="credit"> created by <span>Group 34</span></div>
 
-</section>
+   </section>
 
 <!-- footer section ends -->
 
