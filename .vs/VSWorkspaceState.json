@@ -7,10 +7,10 @@
     "\\app\\Models",
     "\\database",
     "\\database\\migrations",
-    "\\database\\seeders",
     "\\resources",
-    "\\resources\\views"
+    "\\resources\\views",
+    "\\resources\\views\\auth"
   ],
-  "SelectedNode": "\\resources\\views\\products.blade.php",
+  "SelectedNode": "\\database\\migrations\\2022_11_26_214421_create_orders_table.php",
   "PreviewInSolutionExplorer": false
 }
