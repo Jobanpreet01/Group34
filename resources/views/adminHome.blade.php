@@ -113,7 +113,7 @@
       @csrf
 <td><input type= "number" value= "{{$product->Quantity}}" min="0" class="form" name="quantity"></td>
 <!--update button-->
-<td><button type="submit" onclick="myAlert()" class="btn">Update Quantity</button></td>
+<td><button type="submit" onclick="alert('Quantity Updated Successfully')" class="btn">Update Quantity</button></td>
       </form>
 
 <td>£{{$product->Price}}</td>
@@ -175,7 +175,7 @@
   <option value="Delivered">Delivered</option>
 </select></td>
 <!--update button-->
-<td><button type="submit" onclick="myAlert()" class="btn">Update Order Status</button></td>
+<td><button type="submit" onclick="alert('Order Status Changed Successfully')" class="btn">Update Order Status</button></td>
       </form>
 
 </tr>

@@ -131,7 +131,7 @@ td {
 
 
 <!--update button-->
-<td><button type="submit" onclick="myAlert()" class="btn">Update</button></td>
+<td><button type="submit" onclick="alert('Quantity Updated Successfully')" class="btn">Update</button></td>
       </form>
 
       <!--Remove Button-->
@@ -139,7 +139,7 @@ td {
       <form action="{{url('remove',$basket->id)}}" method="POST">
       @csrf
 
-<td><button type="submit" onclick="myAlert()" class="btn">remove</button></td>
+<td><button type="submit" onclick="alert('Product Removed Successfully')" class="btn">remove</button></td>
       </form>
 
 
@@ -193,7 +193,7 @@ td {
 <br>
 
 <!--Submit Order-->
-<td><button type="submit" onclick="alert('Order Has Been Submitted')" class="btn">Checkout</button></td>
+<td><button type="submit" onclick="alert('We received your order! Thank You For Shopping with Us :) !!')" class="btn">Checkout</button></td>
 </form>
 
 

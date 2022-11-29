@@ -81,7 +81,7 @@
 
 <div class="main">
 
-   <form action = "{{url('/contact')}}" class="form-container">
+   <form action = "{{url('/contactUs')}}" class="form-container">
    @csrf
 
        <label for="email">Email</label>
@@ -93,7 +93,7 @@
        <label for="query">Query</label>
        <input type="text" id="query" placeholder="Query" class="box" name="query1" required = "Please Insert Your Query">
 
-       <button type="submit" onclick="" class="btn">Send Message</button>
+       <button type="submit" onclick="alert('Query Sent Successfully')" class="btn">Send Message</button>
        
    </form>
 </div>

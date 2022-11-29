@@ -16,7 +16,12 @@ class Version1Controller extends Controller
     return view('products');
     }
 
-    public function contact(Request $request){ #fetch data from contact form and save into database table queries
+    public function contact(){ #fetch data from contact form and save into database table queries
+
+    return view('contact');
+    }
+
+    public function contactForm(Request $request){ #fetch data from contact form and save into database table queries
 
     $query = new Queries();
 
@@ -25,7 +30,8 @@ class Version1Controller extends Controller
     $query->query=$request->query1;
     $query->save();
 
-    return view('contact');
+    return redirect('contact');
+    
     }
 
     public function basket(){
@@ -35,6 +41,7 @@ class Version1Controller extends Controller
     public function checkout(){
     
     return view('checkout');
+
     }
 
     
