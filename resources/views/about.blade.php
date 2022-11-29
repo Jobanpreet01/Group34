@@ -4,9 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Checkout</title>
-   <link rel="shortcut icon" type="image/png" href="images/fav2.png"/>
-   
+   <title>About Us</title>
+
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -35,8 +34,7 @@
 
 <header class="main-header">
 
-   <a href="{{url('/')}}" class="logo"><img src="images/Fav.png" alt="Logo2" width="50" height="50"></a>
-
+   <a href="#" class="logo"> <i class="fas fa-id-card"></i></a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
@@ -44,7 +42,6 @@
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
-      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -60,42 +57,23 @@
 <!-- header section ends -->
 
 <section class="heading-link">
-   <h3>Checkout</h3>
-   <p> <a href="index.php">home</a> / checkout </p> <!-- links the home heading on the contact me page back to the home page -->
+   <h3>About Page</h3>
+   <p> <a href="index.php">home</a> / about </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
       <section class="products">
 
-<h1 class="heading">Checkout</h1>
+<h1 class="heading">About Us</h1>
 
 </section>
 
 <section class=""> 
-  <form action="">
-      <div>
-         <label class="checkout-header" for="name">Name:</label>  <!-- The forms the user fills in -->
-         <input class="checkout-form" type="text" name="name" id="name" placeholder="Enter your name">
-      </div>
-      <div>
-         <label class="checkout-header" for="cardnumber">Card number:</label>
-         <input class="checkout-form" type="number" name="cardnumber" id="cardnumber" placeholder="Enter your card number">
-      </div>
-      <div>
-         <label class="checkout-header" for="billingaddress">City:</label>
-         <input class="checkout-form" type="text" name="billingaddress" id="billingaddress" placeholder="Enter your address">
-      </div>
-      <div>
-         <label class="checkout-header" for="street">Street:</label>
-         <input class="checkout-form" type="text" name="street" id="street" placeholder="Enter your street">
-      </div>
-         <label class="checkout-header" for="billingaddress">House number:</label>
-         <input class="checkout-form" type="number" name="housenumber" id="housenumber" placeholder="Enter your house number">
-      <div>
-         <label class="checkout-header" for="postcode">Post code:</label>
-         <input class="checkout-form" type="text" name="postcode" id="postcode" placeholder="Enter your post code">
-      </div>
-         <input class="checkout-button" type="submit" value="Submit">
-  </form>
+  <p style="font-size:24px"> <!-- About Us text -->
+    Vitality Electronics was established in the year 2007AD in Birmingham, England. The company was founded with the goal of providing people all over the globe with the finest technology mankind has ever seen at a competitive price range.Over the years the company 
+    has grown from just the United Kingdom to reaching all corners of the globe and providing quality services and products. We offer a wide range of technology to be purchased by customers on our easy to use website. <br> <br> A key focus of the company is to ensure
+    representation and diversity within our staff, we take great pride in leading society in both social and technological ways. Our founders were a group of univeristy students from Aston university who saw an opportunity for an easy to use website to buy technology
+    and using their unparalleled computer skills and ambition they created one of the largest companies to ever exist. <br> Their names were lost to history but their story lives on through the company they created.
+   </p>
   </section>
 
 
@@ -119,7 +97,6 @@
          <a href="products.php" class="link">Products</a>
          <a href="contact.php" class="link">Contact Us</a>
          <a href="basket.php" class="link">Basket</a>
-         <a href="about.php" class="link">About us</a>
       </div>
 
    </div>
