@@ -4,12 +4,13 @@
     "\\app",
     "\\app\\Http",
     "\\app\\Http\\Controllers",
-    "\\app\\Models",
     "\\database",
-    "\\database\\migrations",
-    "\\resources",
-    "\\resources\\views",
-    "\\resources\\views\\auth"
+    "\\database\\seeders",
+    "\\public",
+    "\\public\\css",
+    "\\public\\images",
+    "\\routes"
   ],
+  "SelectedNode": "\\resources\\views\\contact.blade.php",
   "PreviewInSolutionExplorer": false
 }

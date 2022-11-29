@@ -34,14 +34,14 @@
 
 <header class="main-header">
 
-   <a href="#" class="logo"> <i class="fas fa-id-card"></i></a>
+   <a href="{{url('/')}}" class="logo"><img src="images/Fav.png" alt="Logo2" width="50" height="50"></a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -55,7 +55,7 @@
 </header>
 
 <!-- header section ends -->
-
+<section class="products">
 <section class="heading-link">
    <h3>About Page</h3>
    <p> <a href="index.php">home</a> / about </p> <!-- links the home heading on the contact me page back to the home page -->
@@ -104,7 +104,7 @@
    <div class="credit"> created by <span>Group 34</span></div>
 
 </section>
-
+</section>
 </body>
 </html>
 

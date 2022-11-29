@@ -38,6 +38,7 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
+      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -68,19 +69,19 @@
 </header>
 
 <!-- header section ends -->
-
+<section class="products">
 <section class="heading-link">
    <h3>Contact Us</h3>
    <p> <a href="{{url('/')}}">home</a> / contact </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
-
+      
       <section class="contact-me">
 
 <h1 class="heading"> get in touch </h1>
 
 <div class="main">
 
-   <form action = "{{url('/contact')}}" class="form-container">
+   <form action = "{{url('/contactUs')}}" class="form-container">
    @csrf
 
        <label for="email">Email</label>
@@ -92,10 +93,13 @@
        <label for="query">Query</label>
        <input type="text" id="query" placeholder="Query" class="box" name="query1" required = "Please Insert Your Query">
 
-       <button type="submit" onclick="" class="btn">Send Message</button>
+       <button type="submit" onclick="alert('Query Sent Successfully')" class="btn">Send Message</button>
        
    </form>
 </div>
+
+<br>
+<br>
 
 <div class="submit">
 
@@ -150,6 +154,7 @@
 
    <div class="credit"> created by <span>Group 34</span></div>
 
+</section>
 </section>
 
 </body>
