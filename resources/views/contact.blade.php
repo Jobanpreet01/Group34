@@ -31,7 +31,7 @@
 
 <header class="main-header">
 
-   <a href="#" class="logo"> <i class="fas fa-id-card"></i></a>
+   <a href="{{url('/')}}" class="logo"><img src="images/Fav.png" alt="Logo2" width="50" height="50"></a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
@@ -78,6 +78,25 @@
 
 <h1 class="heading"> get in touch </h1>
 
+<div class="main">
+
+   <form action = "{{url('/contact')}}" class="form-container">
+   @csrf
+
+       <label for="email">Email</label>
+       <input type="text" id="email" placeholder="Enter Email" class="box" name="email1" required = "Please Insert Email">
+
+       <label for="name">Name</label>
+       <input type="text" id="name" placeholder="Name" class="box" name="name1" required = "Please Insert Name">
+
+       <label for="query">Query</label>
+       <input type="text" id="query" placeholder="Query" class="box" name="query1" required = "Please Insert Your Query">
+
+       <button type="submit" onclick="" class="btn">Send Message</button>
+       
+   </form>
+</div>
+
 <div class="submit">
 
    <div class="icons">
@@ -104,25 +123,6 @@
       <p>Birmingham, England</p>
    </div>
 
-</div>
-
-<div class="main">
-
-   <form action = "{{url('/contact')}}" class="form-container">
-   @csrf
-
-       <label for="email">Email</label>
-       <input type="text" id="email" placeholder="Enter Email" class="box" name="email1" required = "Please Insert Email">
-
-       <label for="name">Name</label>
-       <input type="text" id="name" placeholder="Name" class="box" name="name1" required = "Please Insert Name">
-
-       <label for="query">Query</label>
-       <input type="text" id="query" placeholder="Query" class="box" name="query1" required = "Please Insert Your Query">
-
-       <button type="submit" onclick="" class="btn">Send Message</button>
-       
-   </form>
 </div>
 </section>
 

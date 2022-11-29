@@ -33,12 +33,13 @@
 
 <header class="main-header">
 
-   <a href="#" class="logo"> <i class="fas fa-id-card"></i></a>
+<a href="{{url('/')}}" class="logo"><img src="images/Fav.png" alt="Logo2" width="50" height="50"></a>
 
    <nav class="navbar">
    
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the user to select the page they want using the navigation bar at the top -->
       <a href="{{url('/')}}">Home</a>
+      <a href="{{url('/about')}}">About Us</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
