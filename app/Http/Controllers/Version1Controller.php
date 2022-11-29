@@ -26,4 +26,8 @@ class Version1Controller extends Controller
     return view('checkout');
     }
     
+    public function about(){
+        return view('about');
+        }
+        
 }
