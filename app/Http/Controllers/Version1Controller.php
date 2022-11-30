@@ -49,5 +49,9 @@ class Version1Controller extends Controller
     public function about(){
         return view('about');
         }
+
+    public function references(){
+        return view('references');
+        }
         
 }
