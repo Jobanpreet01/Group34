@@ -21,23 +21,23 @@ class AdminSeeder extends Seeder
        $users = [
             [
                'name'=>'Admin',
-               'email'=>'admin@gmail.com',
+               'email'=>'group34@gmail.com',
                'type'=>1,
-               'password'=> bcrypt('Admin.01'),
+               'password'=> bcrypt('Group34.01'),
             ],
 
             [
-               'name'=>'Jo',
-               'email'=>'jo@gmail.com',
+               'name'=>'Vegeta',
+               'email'=>'vegeta9990990@gmail.com',
                'type'=>0,
-               'password'=> bcrypt('jo01'),
+               'password'=> bcrypt('Vegeta.01'),
             ],
 
             [
                'name'=>'Joban',
-               'email'=>'joban@gmail.com',
+               'email'=>'group34_customer_vitality_electronics@gmail.com',
                'type'=>0,
-               'password'=> bcrypt('joban01'),
+               'password'=> bcrypt('Group34.007'),
             ],
         ];
     
