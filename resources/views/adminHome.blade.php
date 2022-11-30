@@ -74,6 +74,11 @@
 </header>
 
 
+<section class="products">
+<section class="heading-link">
+   <h3>{{ @Auth::user()->name }}'s Account</h3>
+</section>
+</section>
 
 <!-- header section ends -->
 

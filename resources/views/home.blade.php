@@ -73,8 +73,11 @@
 
 </header>
 
-<br>
-
+<section class="products">
+<section class="heading-link">
+   <h3>{{ @Auth::user()->name }}'s Account</h3>
+</section>
+</section>
 
 <!-- header section ends -->
 <style>
@@ -108,7 +111,7 @@ td {
 </style>
 <div class="container">
 <br>
-<div class="row"><h1>Your Basket</h1></div>
+<div class="row"><h1>My Basket</h1></div>
 <table>
 <br>
 <tr>
