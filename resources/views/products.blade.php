@@ -168,10 +168,11 @@ background-color: #d1e0e0;
       <div class="box">
          <h3>Quick Links</h3>
 
-         <a href="{{url('/')}}" class = "link">Home</a>
+      <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
       <a href="{{url('/about')}}" class = "link">About Us</a>
+      <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
 
       </div>
 

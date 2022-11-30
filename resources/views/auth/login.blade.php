@@ -49,17 +49,22 @@
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
-      <a href="{{url('/')}}">Home</a>
-      <a href="{{url('/products')}}" class="link">Products</a>
-      <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/about')}}">About Us</a>
-      <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+      <a style="text-decoration:none" href="{{url('/')}}">Home</a>
+      <a style="text-decoration:none" href="{{url('/products')}}" class="link">Products</a>
+      <a style="text-decoration:none" href="{{url('/contact')}}">Contact Us</a>
+      <a style="text-decoration:none" href="{{url('/about')}}">About Us</a>
+      <a style="text-decoration:none" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
    </nav>
 
 </header>
 
+<section class="products">
+<section class="heading-link">
+   <h3> Log In</h3>
+</section>
+</section>
 <br>
-<br>
+
 
 <main class="py-4">
 
@@ -150,7 +155,7 @@
 <br>
 <br>
 
-
+<section class="products">
 <section class="footer">
 
    <div class="box-container">
@@ -164,19 +169,20 @@
 </div>
       </div>
 
+      
       <div class="box">
          <h3>Quick Links</h3>
 
-         <a href="{{url('/')}}" class = "link">Home</a>
-      <a href="{{url('/products')}}" class="link">Products</a>
-      <a href="{{url('/contact')}}" class = "link">Contact Us</a>
-      <a href="{{url('/about')}}" class = "link">About Us</a>
+         <a style="text-decoration:none" href="{{url('/')}}" class = "link">Home</a>
+      <a style="text-decoration:none" href="{{url('/products')}}" class="link">Products</a>
+      <a style="text-decoration:none" href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a style="text-decoration:none" href="{{url('/about')}}" class = "link">About Us</a>
+      <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
 
       </div>
+      </section>
 
    </div>
-
-   <div class="credit"> created by <span>Group 34</span></div>
 
    </section>
 
