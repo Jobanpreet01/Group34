@@ -7,10 +7,13 @@
     "\\database",
     "\\database\\seeders",
     "\\public",
+    "\\public\\css",
     "\\resources",
+    "\\resources\\css",
     "\\resources\\views",
-    "\\resources\\views\\auth"
+    "\\resources\\views\\auth",
+    "\\routes"
   ],
-  "SelectedNode": "\\public",
+  "SelectedNode": "\\resources\\views\\auth\\register.blade.php",
   "PreviewInSolutionExplorer": false
 }
