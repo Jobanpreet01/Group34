@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\database",
+    "\\database\\seeders",
+    "\\public",
+    "\\public\\css",
     "\\resources",
     "\\resources\\views"
   ],
+  "SelectedNode": "\\resources\\views\\adminHome.blade.php",
   "PreviewInSolutionExplorer": false
 }

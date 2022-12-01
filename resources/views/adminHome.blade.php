@@ -190,7 +190,7 @@
 <td>Street Address</td>
 <td>Post Code</td>
 <td>Order Status</td>
-<td>&nbsp &nbsp - - </td>
+<td>Change Order Status </td>
 <td><div style="text-align:center;">Change Order Status</div></td>
 
 </tr>
@@ -253,7 +253,7 @@
 
    </div>
 
-   <section class="products">
+   
 <section class="footer">
 
    <div class="box-container">
@@ -278,7 +278,7 @@
       <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
 
       </div>
-      </section>
+      
 
       </div>
    </section>
