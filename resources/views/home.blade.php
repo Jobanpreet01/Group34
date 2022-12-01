@@ -242,7 +242,7 @@ td {
 
 </div>
 
-<section class="products">
+
 <section class="footer">
 
    <div class="box-container">
@@ -268,7 +268,7 @@ td {
 
 </div>
       </div>
-      </section>
+      
 </section>
 
 </body>

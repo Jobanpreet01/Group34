@@ -185,10 +185,10 @@ background-color: #d1e0e0;
 function searchBar() {
   let searchText = document.getElementById('search').value.toUpperCase();
   let product = document.querySelectorAll('.product')
-  let productName = document.getElementsByTagName('h3')
+  let productName = document.getElementsByTagName('h5')
 
   for (var i = 0; i < productName.length; i++) {
-    let match = product[i].getElementsByTagName('h3')[0];
+    let match = product[i].getElementsByTagName('h5')[0];
     let textvalue = match.textContent || match.innerHTML || match.innerText
     if (match) {
 

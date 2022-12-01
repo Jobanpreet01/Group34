@@ -9,9 +9,8 @@
     "\\public",
     "\\public\\css",
     "\\resources",
-    "\\resources\\css",
     "\\resources\\views"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\Version1Controller.php",
+  "SelectedNode": "\\resources\\views\\adminHome.blade.php",
   "PreviewInSolutionExplorer": false
 }

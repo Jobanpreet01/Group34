@@ -80,7 +80,7 @@
 <!-- header section ends -->
 <section class="products">
 <section class="heading-link">
-   <h3>About Page</h3>
+   <h3>About Us Page</h3>
    <p> <a href="index.php">home</a> / about </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
