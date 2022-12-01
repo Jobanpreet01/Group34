@@ -44,14 +44,14 @@
 
 <header class="main-header">
 
-   <a href="#" class="logo"> <i class="fas fa-id-card"></i></a>
+   <a href="{{url('/')}}" class="logo"><img src="images/Fav.png" alt="Logo2" width="50" height="50"></a>
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
-      <a href="{{url('/')}}">Home</a>
-      <a href="{{url('/products')}}" class="link">Products</a>
-      <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      <a style="text-decoration:none" href="{{url('/')}}">Home</a>
+      <a style="text-decoration:none" href="{{url('/products')}}" class="link">Products</a>
+      <a style="text-decoration:none" href="{{url('/contact')}}">Contact Us</a>
+      <a style="text-decoration:none" href="{{url('/about')}}">About Us</a>
       <a class="nav-item dropdown">
       <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -74,6 +74,11 @@
 </header>
 
 
+<section class="products">
+<section class="heading-link">
+   <h3>{{ @Auth::user()->name }}'s Account</h3>
+</section>
+</section>
 
 <!-- header section ends -->
 
@@ -113,7 +118,7 @@
       @csrf
 <td><input type= "number" value= "{{$product->Quantity}}" min="0" class="form" name="quantity"></td>
 <!--update button-->
-<td><button type="submit" onclick="myAlert()" class="btn">Update Quantity</button></td>
+<td><button type="submit" onclick="alert('Quantity Updated Successfully')" class="btn">Update Quantity</button></td>
       </form>
 
 <td>£{{$product->Price}}</td>
@@ -175,7 +180,7 @@
   <option value="Delivered">Delivered</option>
 </select></td>
 <!--update button-->
-<td><button type="submit" onclick="myAlert()" class="btn">Update Order Status</button></td>
+<td><button type="submit" onclick="alert('Order Status Changed Successfully')" class="btn">Update Order Status</button></td>
       </form>
 
 </tr>
@@ -204,8 +209,37 @@
 </table>
 
 
+   </div>
 
+   <section class="products">
+<section class="footer">
 
+   <div class="box-container">
+
+      <div class="box">
+      <h3>Vitality Electronics</h3>
+         <p>Welcome to our e-commerce website where we sell a large range of tech products. This company has been going for 15 years and we are proud to have over 100 million users and we are located all over the world with many connections in all parts of the world, which has allowed for us to expand globally and a fast rate. We look forward to you shopping with us and if you have any queries please feel free to find our contact details under the contacts section.</p>
+         <div class="share">
+
+         
+</div>
+      </div>
+
+      
+      <div class="box">
+         <h3>Quick Links</h3>
+
+         <a  style="text-decoration:none" href="{{url('/')}}" class = "link">Home</a>
+      <a  style="text-decoration:none" href="{{url('/products')}}" class="link">Products</a>
+      <a  style="text-decoration:none" href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a  style="text-decoration:none" href="{{url('/about')}}" class = "link">About Us</a>
+      <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
+
+      </div>
+      </section>
+
+   </div>
+   </section>
 
 </body>
 </html>

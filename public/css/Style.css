@@ -167,6 +167,7 @@ section {
   color: #0eb582;
   cursor: pointer;
   text-transform: capitalize;
+ 
 }
 
 .btn:hover {
@@ -282,7 +283,7 @@ section {
 }
 
 .footer {
-  background: #f0fdfa;
+  background: rgb(173,226,198);
 }
 
 .footer .box-container {
@@ -595,12 +596,26 @@ section {
   border: none 0px;
   border-radius: 15px;
   margin: 20px;
-  box-shadow: 3px 3px 5px rgb(54, 53, 53);
+  box-shadow: 3px 3px 5px rgb(149, 241, 241);
   padding: 15px;
   cursor: pointer;
   background-image: linear-gradient(to bottom right, #c0ecdf, #0eb582);
   font-size: 25px;
 }
+
+
+.search-bar{
+  width: 35%;
+  background-color: rgb(149, 241, 241);
+  color: rgb(0, 0, 0);
+  border: none 0px;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 3px 3px 5px rgb(133, 204, 204);
+  padding: 15px;
+  cursor: text;
+  background-image: linear-gradient(to bottom right, #c0ecdf, #0eb582);
+  font-size: 25px;
 
 .heading-link-2 {
   text-align: center;
@@ -636,3 +651,5 @@ section {
   text-transform: capitalize;
   color: #444;
 }
+
+

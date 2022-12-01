@@ -49,14 +49,21 @@
 
    <nav class="navbar">
       <div id="close-navbar" class="fas fa-times"></div> <!-- allows the headers to be clicked and take the user to the different pages -->
-      <a href="{{url('/')}}">Home</a>
-      <a href="{{url('/products')}}" class="link">Products</a>
-      <a href="{{url('/contact')}}">Contact Us</a>
-      <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+      <a style="text-decoration:none" href="{{url('/')}}">Home</a>
+      <a style="text-decoration:none" href="{{url('/products')}}" class="link">Products</a>
+      <a style="text-decoration:none" href="{{url('/contact')}}">Contact Us</a>
+      <a style="text-decoration:none" href="{{url('/about')}}">About Us</a>
+      <a style="text-decoration:none" href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
    </nav>
 
 </header>
 
+<section class="products">
+<section class="heading-link">
+   <h3> Log In</h3>
+</section>
+</section>
+<br>
 
 
 <main class="py-4">
@@ -140,7 +147,44 @@
 
 <!-- header section ends -->
 
+<!-- footer section starts  -->
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section class="products">
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+      <h3>Vitality Electronics</h3>
+         <p>Welcome to our e-commerce website where we sell a large range of tech products. This company has been going for 15 years and we are proud to have over 100 million users and we are located all over the world with many connections in all parts of the world, which has allowed for us to expand globally and a fast rate. We look forward to you shopping with us and if you have any queries please feel free to find our contact details under the contacts section.</p>
+         <div class="share">
+
+         
+</div>
+      </div>
+
+      
+      <div class="box">
+         <h3>Quick Links</h3>
+
+         <a style="text-decoration:none" href="{{url('/')}}" class = "link">Home</a>
+      <a style="text-decoration:none" href="{{url('/products')}}" class="link">Products</a>
+      <a style="text-decoration:none" href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a style="text-decoration:none" href="{{url('/about')}}" class = "link">About Us</a>
+      <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
+
+      </div>
+      </section>
+
+   </div>
+
+   </section>
 
 
 </body>

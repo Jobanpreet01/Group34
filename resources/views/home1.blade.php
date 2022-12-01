@@ -41,24 +41,28 @@
       <a href="{{url('/')}}">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
+      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
       @endguest
 
-      
+      <?php if(@Auth::user()->name != null) : ?>
+      <?php if(@Auth::user()->name != 'Admin') : ?>
       <?php if(auth()->user()->type ?? 1): ?>
       <a id="navbarDropdown" class="nav-link dropdown-toggle" 
         href= "{{url('/home')}}"
     
           role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-         {{ @Auth::user()->name }}
+         {{ @Auth::user()->name }}'s Basket
       </a>
+      <?php endif; ?>
+      <?php endif; ?>
       <?php endif; ?>
       
 
-
       
+      <?php if(@Auth::user()->name == 'Admin') : ?>
       <?php if(auth()->user()->type ?? 0): ?>
       <a id="navbarDropdown" class="nav-link dropdown-toggle" 
         href= "{{url('/admin')}}"
@@ -66,20 +70,9 @@
           role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
          Admin
       </a>
+
       <?php endif; ?>
-      
-      
-      
-      
-      
-
-       
-      
-                                
-
-                                
-                            
-      
+      <?php endif; ?>
       
    </nav>
 
@@ -88,7 +81,7 @@
 <!-- header section ends -->
 
 <!-- home section starts  -->
-
+<section class="products">
 <section class="home">
 
    <div class="swiper home-slider">
@@ -104,9 +97,11 @@
       </div>
 
 </section>
+</section>
+
 
 <section class="contact-me">
-
+<section class="products">
 <h1 class="heading"> Our Influence Worldwide </h1>
 
 <div class="submit">
@@ -136,8 +131,9 @@
    </div>
 
 </div>
+</section>
 
-<section class="contact-me">
+
 
 <h1 class="heading"> What We Specialise In </h1>
 
@@ -167,11 +163,7 @@
       <i class="fas fa-headphones"></i>
       <h3>Headphones</h3>
       </div>
-      
-      <div class="icons">
-      <i class="fas fa-print"></i>
-      <h3>Printers</h3>
-      </div>
+     
 
 </div>
 
@@ -194,17 +186,21 @@
       </div>
 
       <div class="box">
-         <h3>quick links</h3>
+         <h3>Quick Links</h3>
+
          <a href="{{url('/')}}" class = "link">Home</a>
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}" class = "link">Contact Us</a>
+      <a href="{{url('/about')}}" class = "link">About Us</a>
+      <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
+
       </div>
 
    </div>
 
    <div class="credit"> created by <span>Group 34</span></div>
 
-</section>
+   </section>
 
 <!-- footer section ends -->
 

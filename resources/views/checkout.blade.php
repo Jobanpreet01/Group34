@@ -44,6 +44,7 @@
       <a href="{{url('/products')}}" class="link">Products</a>
       <a href="{{url('/contact')}}">Contact Us</a>
       <a href="{{url('/basket')}}"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+      <a href="{{url('/about')}}">About Us</a>
       @guest <!-- if user is loged in, this will not appear  -->
       <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
       <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
@@ -59,8 +60,8 @@
 <!-- header section ends -->
 
 <section class="heading-link">
-   <h3>Products</h3>
-   <p> <a href="index.php">home</a> / products </p> <!-- links the home heading on the contact me page back to the home page -->
+   <h3>Checkout</h3>
+   <p> <a href="index.php">home</a> / checkout </p> <!-- links the home heading on the contact me page back to the home page -->
 </section>
 
       <section class="products">
@@ -118,6 +119,7 @@
          <a href="products.php" class="link">Products</a>
          <a href="contact.php" class="link">Contact Us</a>
          <a href="basket.php" class="link">Basket</a>
+         <a href="about.php" class="link">About us</a>
       </div>
 
    </div>

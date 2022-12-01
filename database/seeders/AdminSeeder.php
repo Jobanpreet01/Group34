@@ -21,23 +21,23 @@ class AdminSeeder extends Seeder
        $users = [
             [
                'name'=>'Admin',
-               'email'=>'admin@gmail.com',
+               'email'=>'group34@gmail.com',
                'type'=>1,
-               'password'=> bcrypt('Admin.01'),
+               'password'=> bcrypt('Group34.01'),
             ],
 
             [
-               'name'=>'Jo',
-               'email'=>'jo@gmail.com',
+               'name'=>'Vegeta',
+               'email'=>'vegeta9990990@gmail.com',
                'type'=>0,
-               'password'=> bcrypt('jo01'),
+               'password'=> bcrypt('Vegeta.01'),
             ],
 
             [
                'name'=>'Joban',
-               'email'=>'joban@gmail.com',
+               'email'=>'group34_customer_vitality_electronics@gmail.com',
                'type'=>0,
-               'password'=> bcrypt('joban01'),
+               'password'=> bcrypt('Group34.007'),
             ],
         ];
     
@@ -126,7 +126,7 @@ class AdminSeeder extends Seeder
                'Price'=> 849,
                'Description'=>'This Phone can Fold',
                'Quantity'=> 4,
-               'Image'=>'samsungflip.jpg',
+               'Image'=>'images/samsungflip.jpg',
             ],
 
             [
@@ -134,7 +134,7 @@ class AdminSeeder extends Seeder
                'Price'=> 449,
                'Description'=>'This Xbox is Fast',
                'Quantity'=> 8,
-               'Image'=>'xbox.jpg',
+               'Image'=>'images/xbox.jpg',
             ],
 
             [
@@ -142,7 +142,7 @@ class AdminSeeder extends Seeder
                'Price'=> 259,
                'Description'=>'This Console is Great',
                'Quantity'=> 56,
-               'Image'=>'nintendoswitch.jpg',
+               'Image'=>'images/nintendoswitch.jpg',
             ],
         ];
     

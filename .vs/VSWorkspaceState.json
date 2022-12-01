@@ -1,8 +1,19 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\database",
+    "\\database\\seeders",
+    "\\public",
+    "\\public\\css",
     "\\resources",
-    "\\resources\\views"
+    "\\resources\\css",
+    "\\resources\\views",
+    "\\resources\\views\\auth",
+    "\\routes"
   ],
+  "SelectedNode": "\\resources\\views\\auth\\register.blade.php",
   "PreviewInSolutionExplorer": false
 }
