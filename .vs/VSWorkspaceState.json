@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\resources",
+    "\\resources\\views"
   ],
-  "SelectedNode": "\\artisan",
+  "SelectedNode": "\\resources\\views\\home.blade.php",
   "PreviewInSolutionExplorer": false
 }
