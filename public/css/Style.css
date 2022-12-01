@@ -554,6 +554,7 @@ section {
   text-transform: capitalize;
   color: #444;
   padding: .5rem 0;
+  text-align: left;
 }
 
 .products .box-container .product .submit {

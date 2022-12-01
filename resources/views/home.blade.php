@@ -85,7 +85,7 @@
     width: 0 auto; height:200px; border: 0px solid black; margin: 0 auto;
 }
 .row {
-    width:0 auto; height:0 auto; border: 2px solid black; margin:0 auto; font: 10px  Arial, sans-serif; text-align: center; background-color: #90ee99; 
+    width:0 auto; height:0 auto; border: 2px solid black; margin:0 auto; font: 10px  Arial, sans-serif; text-align: center; background-color: #21A54B; 
 }
 .product,.quantity,.price{
     margin: 0 auto; background-color: rgb(211,211,211);
@@ -100,24 +100,34 @@ td {
   text-align: center;
 }
 .btn {
-    background-color: #99ee99;
+    background-color: #219BA5;
     margin-top: 0.3rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: black;
+    padding: 5px 15px;
 }
 .checkoutSec{
-    background-color: rgb(211,211,211); margin: 1px;
-
+    background-color: rgb(211,211,211); margin:1px;
 
 }
+.Myorderhistory{
+    background-color: rgb(211,211,211); margin:2px;
+
+}
+
+
 </style>
+<section class="products">
 <div class="container">
 <br>
 <div class="row"><h1>My Basket</h1></div>
 <table>
 <br>
 <tr>
-<td><div class"col"><div class="product"><h2>&nbsp Product &nbsp</h2></div></div></td>
-<td><div class"col"><div class="quantity"><h2>&nbsp Quantity &nbsp</h2></div></div></td>
-<td><div class"col"><div class="price"><h2>&nbsp Price &nbsp</h2></div></div></td>
+<td style="font-size: 20px;" ><div class"col"><div class="product"><h2>&nbsp Product &nbsp</h2></div></div></td>
+<td style="font-size: 20px;" ><div class"col"><div class="quantity"><h2>&nbsp Quantity &nbsp</h2></div></div></td>
+<td style="font-size: 20px;" ><div class"col"><div class="price"><h2>&nbsp Price &nbsp</h2></div></div></td>
 </tr>
 @foreach($baskets as $basket)
 <tr>
@@ -169,14 +179,14 @@ td {
 
 <table>
 <tr>
-<td><div class"col"><div class="checkoutSec"><h3>Name</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>House Number</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>Street Address</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>Post Code</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>City</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>Card Number</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>Expiry Date</h3></div></div></td>
-<td><div class"col"><div class="checkoutSec"><h3>Cvv Number</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>Name</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>House Number</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>Street Address</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>Post Code</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>City</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>Card Number</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>Expiry Date</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="checkoutSec"><h3>Cvv Number</h3></div></div></td>
 
 </tr>
 
@@ -212,11 +222,11 @@ td {
 <div class="row"><h1>My Order History</h1></div>
 <table>
 <tr>
-<td>Product</td>
-<td>Quantity</td>
-<td>Price</td>
-<td>Order Status</td>
-<td>Ordered Places On Date:</td>
+<td style="font-size: 20px;"><div class"col"><div class="Myorderhistory"><h3>&nbsp Product &nbsp</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="Myorderhistory"><h3>&nbsp Quantity &nbsp</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="Myorderhistory"><h3>&nbsp Price &nbsp</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="Myorderhistory"><h3>&nbsp Order Status &nbsp</h3></div></div></td>
+<td style="font-size: 20px;"><div class"col"><div class="Myorderhistory"><h3>&nbsp Ordered Places On Date: &nbsp</h3></div></div></td>
 </tr>
 @foreach($myorders as $order)
 <tr>
@@ -256,11 +266,10 @@ td {
       <a  style="text-decoration:none" href="{{url('/about')}}" class = "link">About Us</a>
       <a style="text-decoration:none" href="{{url('/references')}}" class = "link">References</a>
 
+</div>
       </div>
       </section>
-
-   </div>
-   </section>
+</section>
 
 </body>
 </html>
