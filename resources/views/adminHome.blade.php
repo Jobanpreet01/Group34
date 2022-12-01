@@ -81,14 +81,48 @@
 </section>
 
 <!-- header section ends -->
+<style>
+.content-table {
+    border-collapse: collapse;
+    margin:25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0,0.15);
+}
+.content-table thead tr{
+    background-color:#009878;
+    color:#ffffff;
+    text-align: left;
+    font-weight:bold;
+}
+.content-table th,
+.content-table td{
+    padding:8px 10px;
 
+}
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #009878;
+}
+
+</style>
+<section class="products">
 <h1>List of Users</h1>
-<table>
+<table class="content-table">
+<thead>
 <tr>
-<td>ID</td>
-<td>Name</td>
-<td>Email</td>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
 </tr>
+</thead>
 @foreach($members as $user)
 <tr>
 <td>{{$user['id']}}</td>
@@ -100,14 +134,17 @@
 
 
 <h1>List of Products in stock</h1>
-<table>
+<table class="content-table">
+<thead>
 <tr>
 <td>ID</td>
 <td>Title</td>
 <td>Description</td>
 <td>Quantity</td>
+<td> &nbsp &nbsp -- </td>
 <td>Price</td>
 </tr>
+</thead>
 @foreach($products as $product)
 <tr>
 <td>{{$product['id']}}</td>
@@ -118,7 +155,7 @@
       @csrf
 <td><input type= "number" value= "{{$product->Quantity}}" min="0" class="form" name="quantity"></td>
 <!--update button-->
-<td><button type="submit" onclick="alert('Quantity Updated Successfully')" class="btn">Update Quantity</button></td>
+<td><button style="background-color:#73b59e;box-shadow:0 0 20px rgba(0,0,0,0.15);" type="submit" onclick="alert('Quantity Updated Successfully')" class="btn">Update Quantity</button></td>
       </form>
 
 <td>£{{$product->Price}}</td>
@@ -137,7 +174,8 @@
 
 
 <h1>All orders from users</h1>
-<table>
+<table class="content-table">
+<thead>
 <tr>
 <td>Order ID</td>
 <td>User ID</td>
@@ -152,9 +190,11 @@
 <td>Street Address</td>
 <td>Post Code</td>
 <td>Order Status</td>
-<td>Change Order Status</td>
+<td>&nbsp &nbsp - - </td>
+<td><div style="text-align:center;">Change Order Status</div></td>
 
 </tr>
+</thead>
 @foreach($orders as $order)
 <tr>
 <td>{{$order['id']}}</td>
@@ -180,7 +220,7 @@
   <option value="Delivered">Delivered</option>
 </select></td>
 <!--update button-->
-<td><button type="submit" onclick="alert('Order Status Changed Successfully')" class="btn">Update Order Status</button></td>
+<td><button style="background-color:#73b59e;box-shadow:0 0 20px rgba(0,0,0,0.15);" type="submit" onclick="alert('Order Status Changed Successfully')" class="btn">Update Order Status</button></td>
       </form>
 
 </tr>
@@ -190,7 +230,8 @@
 
 
 <h1>Customers' Queries</h1>
-<table>
+<table class="content-table">
+<thead>
 <tr>
 <td>Query ID</td>
 <td>Email</td>
@@ -198,6 +239,7 @@
 <td>Query</td>
 
 </tr>
+</thead>
 @foreach($queries as $query)
 <tr>
 <td>{{$query['id']}}</td>
@@ -238,7 +280,7 @@
       </div>
       </section>
 
-   </div>
+      </div>
    </section>
 
 </body>
