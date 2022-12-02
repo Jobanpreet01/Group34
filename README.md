@@ -1,6 +1,6 @@
 # Group34
 
-Installation Guide on a local computer:
+#Installation Guide on a local computer:
 1# Download the zip file containing the repository from GitHub.
 2# Extract the zip file.
 3# Open Command prompt as an adminitrator.
@@ -18,9 +18,9 @@ Installation Guide on a local computer:
 14# In command prompt type and run: php artisan serve
 
 
-Quick guide on what the main files of the project do:
+#Quick guide on what the main files of the project do:
 
-# Controllers
+#Controllers
 There's 4 Controllers in this project:
 1. Controller.php is the root of the controller hierarchy and shoudln't be touched.
 2. HomeController.php is the main controller that handles 80% of the logical process we do.
@@ -49,9 +49,9 @@ The css file to handle the style for the blade files is located in public/css/St
 The blade.php files are located in resources/views and resources/views/auth folders. There are mainly 9 blade.php files we used for the project and their file names says what pages they are.
 
 
-Common problems and solutions:
-# If the database is not connected and is giving problems please open the .env file make sure that from line 11 to 16 everything is up to date.
-# If you can't view the project on the browser make sure you are hosting the repository correctly.
-# If you can't view the project make sure the URL is correct. 
-# If the problem persists do the installation steps again from zero.
-# For any other problems contact: 210142187@aston.ac.uk
+# Common problems and solutions:
+1# If the database is not connected and is giving problems please open the .env file make sure that from line 11 to 16 everything is up to date.
+2# If you can't view the project on the browser make sure you are hosting the repository correctly.
+3# If you can't view the project make sure the URL is correct. 
+4# If the problem persists do the installation steps again from zero.
+5# For any other problems contact: 210142187@aston.ac.uk
