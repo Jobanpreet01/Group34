@@ -22,7 +22,7 @@
 
 #Controllers
 There's 4 Controllers in this project:
-1. Controller.php is the root of the controller hierarchy and shoudln't be touched.
+1. Controller.php is the root of the controller hierarchy and shoudn't be touched.
 2. HomeController.php is the main controller that handles 80% of the logical process we do.
 3. ProductsController.php is used to handle data for the products.blade.php file.
 4. Version1Controller.php is used to handle data for the contact form on the contact.blade.php file.
