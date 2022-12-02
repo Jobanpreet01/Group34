@@ -1,6 +1,6 @@
 # Group34
 
-#Installation Guide on a local computer:
+# Installation Guide on a local computer:
 1# Download the zip file containing the repository from GitHub.
 2# Extract the zip file.
 3# Open Command prompt as an adminitrator.
@@ -17,17 +17,21 @@
 13# In command prompt type and run: npm run dev
 14# In command prompt type and run: php artisan serve
 
+# Admin access credentials if you use the seeder to seed the database:
+  Email: group34@gmail.com
+  Password: Group34.01
 
-#Quick guide on what the main files of the project do:
 
-#Controllers
+# Quick guide on what the main files of the project do:
+
+# Controllers
 There's 4 Controllers in this project:
 1. Controller.php is the root of the controller hierarchy and shoudn't be touched.
 2. HomeController.php is the main controller that handles 80% of the logical process we do.
 3. ProductsController.php is used to handle data for the products.blade.php file.
 4. Version1Controller.php is used to handle data for the contact form on the contact.blade.php file.
 
-#Seeders
+# Seeders
 There's one main seeder you can use to feed or change the data we feed in the database and that is the AdminSeeder.php.
 
 # Models
